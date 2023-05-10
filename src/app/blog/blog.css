@@ -1,0 +1,25 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.blog-wrapper {
+  background-color: #424249;
+}
+
+.blog-image {
+  width: 100%;
+}
+
+.blog-title {
+  font-size: 2.1rem;
+  padding: 1rem;
+  color: #D8D7FF;
+}
+
+.blog-text {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
