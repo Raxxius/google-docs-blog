@@ -11,7 +11,7 @@ function App() {
     <>
       <div className="blog-header">Header</div>
       <BlogList fetchSite={fetchSite}/>
-      <BlogSideBar />
+      <BlogSideBar fetchSite={fetchSite}/>
       <BlogAuthor />
     </>
   );
