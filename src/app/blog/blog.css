@@ -5,11 +5,21 @@
   text-align: center;
 }
 
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+p {
+  padding: 1rem;
+}
+
 .blog-wrapper {
   background-color: #424249;
 }
 
 .blog-image {
+  padding: 1rem;
   width: 100%;
 }
 
@@ -19,7 +29,27 @@
   color: #D8D7FF;
 }
 
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-author-image {
+  border-radius: 6rem;
+  height: 20rem;
+}
+
 .blog-text {
   font-size: 1rem;
   padding: 0.5rem;
+}
+
+.blog-social-media {
+margin-left: 2.5rem;
+}
+
+.blog-icon {
+  height: 2.5rem;
+  margin: 1rem;
 }
