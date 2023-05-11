@@ -1,10 +1,13 @@
 import { use } from "react";
 import googleWebFetch from "@/apis/googleWebFetch";
 
-export default function blogList(fetchSite) {
+export default function blogList(props) {
+  const url = props.url
   const data = use(
-    googleWebFetch(fetchSite)
+    googleWebFetch(url)
   );
+
+
 
   const blogs = [];
   if (data !== "undefined") {

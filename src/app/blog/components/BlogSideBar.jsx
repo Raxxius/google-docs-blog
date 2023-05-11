@@ -2,11 +2,11 @@ import { use } from "react";
 import googleWebFetch from "@/apis/googleWebFetch";
 
 
-export default function BlogSideBar(fetchSite) {
-  const data = use(
-    googleWebFetch(
-        fetchSite
-    )
-  );
+export default function BlogSideBar(props) {
+    const url = props.url
+    const data = use(
+      googleWebFetch(url)
+    );
+  
 
 }
