@@ -102,8 +102,6 @@ h1 {
 
 }
 
-
-
 @media (min-width: 1200px) {
   .blog-grid {
     display: grid; 

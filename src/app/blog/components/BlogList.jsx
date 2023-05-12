@@ -13,7 +13,6 @@ export default function blogList(props) {
   if (data !== "undefined") {
     for (let blog in data) {
       const date = new Date(data[blog].fileDate).toDateString();
-      console.log(date)
       let returnValue = (
         <div className="blog-wrapper">
           <h1 className="blog-title">{data[blog].title}</h1>
