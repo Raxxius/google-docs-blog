@@ -8,5 +8,9 @@ export default function BlogSideBar(props) {
       googleWebFetch(url)
     );
   
-
+    return (
+      <div className="blog-sidebar">
+        Sidebar
+      </div>
+    )
 }

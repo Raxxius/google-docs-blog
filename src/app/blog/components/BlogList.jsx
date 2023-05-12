@@ -12,12 +12,12 @@ export default function blogList(props) {
   const blogs = [];
   if (data !== "undefined") {
     for (let blog in data) {
-      const date = new Date();
-      date.setMonth(data[blog].fileDate.month)
+      const date = new Date(data[blog].fileDate).toDateString();
+      console.log(date)
       let returnValue = (
         <div className="blog-wrapper">
           <h1 className="blog-title">{data[blog].title}</h1>
-          <p></p>
+          <p className="blog-date">{date}</p>
           <img
             className="blog-image"
             src={data[blog].image.imageCuri}

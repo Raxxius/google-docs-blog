@@ -7,15 +7,21 @@
 
 h1 {
   text-align: center;
-  margin-bottom: 1rem;
 }
 
-p {
-  padding: 1rem;
+.blog-header {
+  max-height: 1rem;
 }
 
 .blog-wrapper {
   background-color: #424249;
+  margin-bottom: 0.2rem;
+}
+
+.blog-title {
+  font-size: 2.1rem;
+  padding: 1rem;
+  color: #d8d7ff;
 }
 
 .blog-image {
@@ -23,10 +29,9 @@ p {
   width: 100%;
 }
 
-.blog-title {
-  font-size: 2.1rem;
-  padding: 1rem;
-  color: #D8D7FF;
+.blog-date {
+  font-size: 0.8rem;
+  padding-left: 1rem;
 }
 
 .wrapper {
@@ -46,10 +51,67 @@ p {
 }
 
 .blog-social-media {
-margin-left: 2.5rem;
+  margin-left: 2.5rem;
 }
 
 .blog-icon {
   height: 2.5rem;
   margin: 1rem;
+}
+
+@media (min-width: 768px) {
+  .blog-grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "header header header"
+      "blog blog author"; 
+  }
+
+  .blog-header {
+    grid-area: header;
+    max-width: 1rem;
+  }
+
+  .blog-list {
+    grid-area: blog;
+  }
+
+  .blog-author-wrapper {
+    grid-area: author;
+    margin: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .blog-grid {
+    display: grid; 
+    grid-template-columns:1fr 1fr 1fr 1fr; 
+    grid-template-rows: auto 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "header header header header"
+      "sidebar blog blog author"; 
+  }
+
+  .blog-sidebar {
+    grid-area: sidebar;
+  }
+
+}
+
+
+
+@media (min-width: 1200px) {
+  .blog-grid {
+    display: grid; 
+    grid-template-columns:1fr 300px 300px 300px 300px 1fr; 
+    grid-template-rows: auto 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "header header header header header header"
+      ". sidebar blog blog author ."; 
+  }
 }
