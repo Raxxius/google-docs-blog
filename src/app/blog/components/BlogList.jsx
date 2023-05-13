@@ -7,8 +7,6 @@ export default function blogList(props) {
     googleWebFetch(url)
   );
 
-
-
   const blogs = [];
   if (data !== "undefined") {
     for (let blog in data) {
