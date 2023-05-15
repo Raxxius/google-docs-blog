@@ -12,15 +12,15 @@ export default function blogList(props) {
     for (let blog in data) {
       const date = new Date(data[blog].fileDate).toDateString();
       let returnValue = (
-        <div className="blog-wrapper">
-          <h1 className="blog-title">{data[blog].title}</h1>
-          <p className="blog-date">{date}</p>
+        <div className="blog-list-wrapper">
+          <h1 className="blog-list-title">{data[blog].title}</h1>
+          <p className="blog-list-date">{date}</p>
           <img
-            className="blog-image"
+            className="blog-list-image"
             src={data[blog].image.imageCuri}
             referrerPolicy="no-referrer"
           />
-          <p className="blog-text">{data[blog].introText}</p>
+          <p className="blog-list-text">{data[blog].introText}</p>
         </div>
       );
       blogs.push(returnValue);

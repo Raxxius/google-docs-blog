@@ -1,5 +1,6 @@
 import googleWebFetch from "@/apis/googleWebFetch";
 import BlogParse from "./BlogParse.jsx";
+import './blog.css'
 import { use } from "react";
 
 export default function (props) {
