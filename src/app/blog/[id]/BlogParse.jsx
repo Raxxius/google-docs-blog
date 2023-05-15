@@ -21,13 +21,17 @@ export default function BlogParse(item) {
     };
 
     const parseElement = (num, tag) => {
+        console.log(tag)
         // image
+        if (tag === "blog-solo-image") {
+            return (<img className="blog-solo-image" src={item.content[num].imageCuri} alt={item.content[num].imageDescription} referrerPolicy="no-referrer"/>)
+        }
         if (item.className[num] === "blog-image") {
-            return (<img className={item.className[num]} src={item.content[num].imageCuri} alt={item.content[num].imageDescription} referrerPolicy="no-referrer"/>)
+            return (<img className="blog-inline-image" src={item.content[num].imageCuri} alt={item.content[num].imageDescription} referrerPolicy="no-referrer"/>)
         }
         // link
         if (item.className[num] === "link") {
-            return (<a classname="blog-link" href={item.content[num].link} target="_blank">{item.content[num].text}</a>)
+            return (<a className="blog-link" href={item.content[num].link} target="_blank">{item.content[num].text}</a>)
         }
         if (item.className[num] === "bold") {
             return (<strong className="bold">{item.content[num]}</strong>)
@@ -47,6 +51,9 @@ export default function BlogParse(item) {
     // add single component element
     if (item.className.length === 1) {
         let tag = parseTag(item.style)
+        if (item.className[0] === "blog-image") {
+            tag = "blog-solo-image"
+        }
         return parseElement(0, tag)
     };
 
@@ -62,7 +69,7 @@ export default function BlogParse(item) {
     let tag = parseTag(item.style);
     return (React.createElement (
         tag,
-        {className: "div-bucket-test"},
+        {className: "blog-multi-element-container"},
         contentList
     ))
 }
