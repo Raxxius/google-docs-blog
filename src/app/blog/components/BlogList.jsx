@@ -1,4 +1,5 @@
 import { use } from "react";
+import Link from "next/link";
 import googleWebFetch from "@/apis/googleWebFetch";
 
 export default function blogList(props) {
@@ -12,16 +13,18 @@ export default function blogList(props) {
     for (let blog in data) {
       const date = new Date(data[blog].fileDate).toDateString();
       let returnValue = (
-        <div className="blog-list-wrapper">
-          <h1 className="blog-list-title">{data[blog].title}</h1>
-          <p className="blog-list-date">{date}</p>
-          <img
-            className="blog-list-image"
-            src={data[blog].image.imageCuri}
-            referrerPolicy="no-referrer"
-          />
-          <p className="blog-list-text">{data[blog].introText}</p>
-        </div>
+        <Link href={`/blog/${encodeURIComponent(data[blog].fileId)}`} className="blog-list-wrapper">
+          <div className="blog-list-wrapper">
+            <h1 className="blog-list-title">{data[blog].title}</h1>
+            <p className="blog-list-date">{date}</p>
+            <img
+              className="blog-list-image"
+              src={data[blog].image.imageCuri}
+              referrerPolicy="no-referrer"
+            />
+            <p className="blog-list-text fade">{data[blog].introText}</p>
+          </div>
+        </Link>
       );
       blogs.push(returnValue);
     }

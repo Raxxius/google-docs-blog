@@ -15,8 +15,8 @@ export default function BlogSideBar(props) {
     let returnValue = (
       <Link href={`/blog/${encodeURIComponent(fileId)}`}
       className="sidebar-wrapper">
-        <p>{title}</p>
-        <p>{date}</p>
+        <p className="sidebar-title">{title}</p>
+        <p className="sidebar-date">{date}</p>
       </Link>
     );
     blogs.push(returnValue);

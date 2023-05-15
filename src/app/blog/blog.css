@@ -9,6 +9,10 @@ h1 {
   text-align: center;
 }
 
+.fade {
+  mask-image: linear-gradient(180deg, #000 20%, transparent);
+}
+
 .blog-header {
   max-height: 1rem;
 }
@@ -29,7 +33,7 @@ h1 {
   width: 100%;
 }
 
-.blog-date {
+.blog-list-date {
   font-size: 0.8rem;
   padding-left: 1rem;
 }
@@ -47,7 +51,9 @@ h1 {
 
 .blog-list-text {
   font-size: 1rem;
-  padding: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .blog-social-media {
@@ -106,6 +112,21 @@ h1 {
     display: block;
   }
 
+  .sidebar-wrapper:hover {
+    color: #d88226;
+    text-shadow: 0px 0px 0.2em #d88226;
+  }
+
+  .sidebar-title {
+    padding: 0.5em;
+    font-size: 1.1em;
+  }
+
+
+  .sidebar-date {
+    padding-left: 2em;
+    padding-bottom: 1em;
+  }
 }
 
 @media (min-width: 1200px) {
