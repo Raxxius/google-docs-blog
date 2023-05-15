@@ -21,6 +21,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: auto;
 }
 
+.legend {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
 .blog-link {
     text-decoration: underline;
     color: #c2c1e5;
@@ -29,6 +34,16 @@ h1, h2, h3, h4, h5, h6 {
 .blog-link:hover {
     color: #735F32;
 }
+
+.blog-author-image {
+    border-radius: 6rem;
+    height: 20rem;
+  }
+
+.blog-icon {
+    height: 2.5rem;
+    margin: 1rem;
+  }
 
 @media (min-width: 768px) {
     .blog-article-grid {

@@ -16,6 +16,10 @@ export default function BlogParse(item) {
         ?
         "h3"
         :
+        style === "SUBTITLE"
+        ?
+        "legend"
+        :
         "p"
         )
     };
@@ -32,16 +36,28 @@ export default function BlogParse(item) {
         if (item.className[num] === "link") {
             return (<a className="blog-link" href={item.content[num].link} target="_blank">{item.content[num].text}</a>)
         }
-        if (item.className[num] === "bold") {
-            return (<strong className="bold">{item.content[num]}</strong>)
+
+        item.className[num] === "bold"
+        ?
+        tag = "strong"
+        :
+        item.className[num] === "italics"
+        ?
+        tag = "i"
+        :
+        tag = tag
+
+        let className = item.className[num]
+
+        if (tag === "legend") {
+            className = tag
+            tag = "p"
         }
-        if (item.className[num] === "italics"){
-            return(<i className="bold"> {item.content[num]}</i>)
-        }
+
         // text element
         return (React.createElement(
             tag,
-            {className: item.className[num]},
+            {className: className},
             item.content[num]
         ))
     }
