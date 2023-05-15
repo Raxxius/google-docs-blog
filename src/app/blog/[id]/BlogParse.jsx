@@ -21,7 +21,6 @@ export default function BlogParse(item) {
     };
 
     const parseElement = (num, tag) => {
-        console.log(tag)
         // image
         if (tag === "blog-solo-image") {
             return (<img className="blog-solo-image" src={item.content[num].imageCuri} alt={item.content[num].imageDescription} referrerPolicy="no-referrer"/>)

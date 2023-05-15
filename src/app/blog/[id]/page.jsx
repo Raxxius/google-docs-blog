@@ -1,7 +1,10 @@
 import googleWebFetch from "@/apis/googleWebFetch";
 import BlogParse from "./BlogParse.jsx";
-import './blog.css'
+import BlogAuthor from "../components/BlogAuthor.jsx";
+import BlogHeader from "../components/BlogHeader.jsx"
+import "./blog.css";
 import { use } from "react";
+
 
 export default function (props) {
   //specific datafetch
@@ -13,9 +16,17 @@ export default function (props) {
 
   const blogs = data.map((blogElement) => {
     return (
+      <>
         <BlogParse {...blogElement} />
+      </>
     );
   });
 
-  return <div className="blog-wrapper">{blogs}</div>;
+  return (
+    <div className="blog-article-grid">
+      <div className="blog-header">Header</div>
+      <div className="blog-wrapper">{blogs}</div>
+      <BlogAuthor />
+    </div>
+  );
 }
