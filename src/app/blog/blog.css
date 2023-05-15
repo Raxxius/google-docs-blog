@@ -13,18 +13,18 @@ h1 {
   max-height: 1rem;
 }
 
-.blog-wrapper {
+.blog-list-wrapper {
   background-color: #424249;
   margin-bottom: 0.2rem;
 }
 
-.blog-title {
+.blog-list-title {
   font-size: 2.1rem;
   padding: 1rem;
   color: #d8d7ff;
 }
 
-.blog-image {
+.blog-list-image {
   padding: 1rem;
   width: 100%;
 }
@@ -45,7 +45,7 @@ h1 {
   height: 20rem;
 }
 
-.blog-text {
+.blog-list-text {
   font-size: 1rem;
   padding: 0.5rem;
 }
@@ -57,6 +57,10 @@ h1 {
 .blog-icon {
   height: 2.5rem;
   margin: 1rem;
+}
+
+.blog-sidebar {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -85,6 +89,7 @@ h1 {
   }
 }
 
+
 @media (min-width: 992px) {
   .blog-grid {
     display: grid; 
@@ -98,6 +103,7 @@ h1 {
 
   .blog-sidebar {
     grid-area: sidebar;
+    display: block;
   }
 
 }
