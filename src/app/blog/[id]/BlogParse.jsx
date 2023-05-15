@@ -19,44 +19,51 @@ export default function BlogParse(item) {
         "p"
         )
     };
-    const tag = parseTag(item.style);
 
-    // add single component element
-    if (item.className.length === 1) {
+    const parseElement = (num, tag) => {
         // image
-        if (item.className[0] === "blog-image") {
-            return (<img className={item.className[0]} src={item.content[0].imageCuri} alt={item.content[0].imageDescription} referrerPolicy="no-referrer"/>)
+        if (item.className[num] === "blog-image") {
+            return (<img className={item.className[num]} src={item.content[num].imageCuri} alt={item.content[num].imageDescription} referrerPolicy="no-referrer"/>)
         }
-
         // link
-        if (item.className[0] === "link") {
-            return (<a classname="blog-link" href={item.content[0].link} target="_blank">{item.content[0].text}</a>)
+        if (item.className[num] === "link") {
+            return (<a classname="blog-link" href={item.content[num].link} target="_blank">{item.content[num].text}</a>)
+        }
+        if (item.className[num] === "bold") {
+            return (<strong className="bold">{item.content[num]}</strong>)
+        }
+        if (item.className[num] === "italics"){
+            return(<i className="bold"> {item.content[num]}</i>)
         }
         // text element
         return (React.createElement(
             tag,
-            {className: item.className[0]},
-            item.content[0]
+            {className: item.className[num]},
+            item.content[num]
         ))
+    }
+
+
+    // add single component element
+    if (item.className.length === 1) {
+        let tag = parseTag(item.style)
+        return parseElement(0, tag)
     };
 
     const contentList = []
 
     for (let i = 0; i < item.className.length; i++) {
-    /** contentList.push(React.createElement(
-            tag,
-            {className: item.className[i]},
-            item.content[i]
-        ))
-    */
+        let tag = "span"
+        contentList.push(parseElement(i, tag))
     }
 
     // add multi component element 
-    return <div className="multi-element">{contentList}</div>
-    
 
-    console.log(contentList)
-
-    return
+    let tag = parseTag(item.style);
+    return (React.createElement (
+        tag,
+        {className: "div-bucket-test"},
+        contentList
+    ))
 }
 
