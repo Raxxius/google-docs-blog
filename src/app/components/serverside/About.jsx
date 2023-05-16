@@ -8,7 +8,7 @@ const About = () => {
         <img
           className="about-photo"
           alt="Photo of Keith with a cam art filter"
-          src={camArt}
+          src={camArt.src}
         ></img>
       </div>
       <p className="about-h2">
