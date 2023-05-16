@@ -91,6 +91,7 @@ h1 {
 .blog-header-title {
   background-color: #282a3abf;
   width: fit-content;
+  padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0 0 1rem;
   margin-right: auto;
