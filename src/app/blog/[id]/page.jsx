@@ -24,7 +24,7 @@ export default function (props) {
 
   return (
     <div className="blog-article-grid">
-      <div className="blog-header">Header</div>
+      <BlogHeader />
       <div className="blog-wrapper">{blogs}</div>
       <BlogAuthor />
     </div>

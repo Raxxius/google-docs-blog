@@ -83,6 +83,19 @@ h1 {
   background-image: url("./assets/images/alexandru-acea-XEB8y0nRRP4-unsplash.jpg");
   background-size: cover;
   background-position: 0% 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-header-title {
+  background-color: #282a3abf;
+  width: fit-content;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  color: aliceblue;
 }
 
 @media (min-width: 768px) {
@@ -98,7 +111,7 @@ h1 {
 
   .blog-header {
     grid-area: header;
-    height: 250px;
+    height: 300px;
   }
 
   .blog-list {
@@ -139,7 +152,7 @@ h1 {
   }
 
   .blog-header {
-    height: 300px;
+    height: 350px;
   }
 
   .sidebar-date {
