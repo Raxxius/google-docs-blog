@@ -1,10 +1,10 @@
 import googleWebFetch from "@/apis/googleWebFetch";
 import BlogParse from "./BlogParse.jsx";
 import BlogAuthor from "../components/BlogAuthor.jsx";
-import BlogHeader from "../components/BlogHeader.jsx"
+import BlogHeader from "../components/BlogHeader.jsx";
+import Navbar from "@/app/components/Navbar.jsx";
 import "../blog.css";
 import { use } from "react";
-
 
 export default function (props) {
   //specific datafetch
@@ -23,10 +23,13 @@ export default function (props) {
   });
 
   return (
-    <div className="blog-grid">
-      <BlogHeader />
-      <div className="blog-wrapper">{blogs}</div>
-      <BlogAuthor />
-    </div>
+    <>
+      <Navbar />
+      <div className="blog-grid">
+        <BlogHeader />
+        <div className="blog-wrapper">{blogs}</div>
+        <BlogAuthor />
+      </div>
+    </>
   );
 }

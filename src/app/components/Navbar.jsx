@@ -1,5 +1,6 @@
 import Moon from "../assets/icons/moon.jsx";
 import Sun from "../assets/icons/sun.jsx";
+import "./Navbar.css"
 
 const Navbar = (props) => {
   const navbarstyle = {

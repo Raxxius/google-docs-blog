@@ -40,6 +40,10 @@ h6 {
   mask-image: linear-gradient(180deg, #000 20%, transparent);
 }
 
+.blog-grid {
+  margin-top: 10vh;
+}
+
 /* [id] styling */
 
 .blog-solo-image {
