@@ -1,6 +1,6 @@
 import Loader from "../../assets/loader/Loader";
 import Starfield from "../../assets/stars/Starfield";
-import Clouds from "../clientside/clouds";
+import Clouds from "../../assets/clientside/Clouds";
 
 const Hero = (props) => {
   const heroStyle = {
