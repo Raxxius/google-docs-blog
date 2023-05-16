@@ -29,7 +29,7 @@ export default function BlogSideBar(props) {
       <div className="blog-sidebar-header">
         <h1>click a link to head to the relevant blog</h1>
       </div>
-      <div>{blogs}</div>;
+      <div>{blogs}</div>
     </div>
   );
 }
