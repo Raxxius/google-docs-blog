@@ -7,10 +7,17 @@
 
 body {
   background-color: #000;
-  background-image: linear-gradient(to right bottom, #000000, #130e11, #1d171d, #24202b, #282a3a);
+  background-image: linear-gradient(
+    to right bottom,
+    #000000,
+    #130e11,
+    #1d171d,
+    #24202b,
+    #282a3a
+  );
   color: aliceblue;
   padding: 0px;
-  margin: 0px
+  margin: 0px;
 }
 
 a {
@@ -18,16 +25,51 @@ a {
   color: aliceblue;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-align: center;
+  padding: 1rem;
+  color: #d8d7ff;
 }
 
 .fade {
   mask-image: linear-gradient(180deg, #000 20%, transparent);
 }
 
+/* [id] styling */
+
+.blog-solo-image {
+  height: 350px;
+  object-fit: cover;
+  overflow: hidden;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-link {
+  text-decoration: underline;
+  color: #c2c1e5;
+}
+
+.blog-link:hover {
+  color: #735f32;
+}
+
+.legend {
+  text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* blog list styling */
+
 .blog-list-wrapper {
-  background-color: #282A3A;
+  background-color: #282a3a;
   margin-bottom: 0.2rem;
 }
 
@@ -46,10 +88,23 @@ h1 {
   padding-left: 1rem;
 }
 
+.blog-list-text {
+  font-size: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* blog author styling */
+
+.blog-author-wrapper {
+  margin: 0px;
 }
 
 .blog-author-image {
@@ -57,11 +112,8 @@ h1 {
   height: 20rem;
 }
 
-.blog-list-text {
-  font-size: 1rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-bottom: 1.5rem;
+.blog-author-text {
+  padding: 1rem;
 }
 
 .blog-social-media {
@@ -73,13 +125,24 @@ h1 {
   margin: 1rem;
 }
 
+/* blog sidebar */
+
 .blog-sidebar {
   display: none;
 }
 
+.sidebar-text {
+  text-align: center;
+}
+
+.sidbar-date {
+  font-size: 0.8rem;
+}
+
+/* blog header styling */
+
 .blog-header {
   height: 200px;
-  width: 100vw;
   background-image: url("./assets/images/alexandru-acea-XEB8y0nRRP4-unsplash.jpg");
   background-size: cover;
   background-position: 0% 35%;
@@ -91,7 +154,7 @@ h1 {
 .blog-header-title {
   background-color: #282a3abf;
   width: fit-content;
-  padding: 1rem;
+  max-width: 95vw;
   border-radius: 1rem;
   box-shadow: 0 0 1rem;
   margin-right: auto;
@@ -101,13 +164,13 @@ h1 {
 
 @media (min-width: 768px) {
   .blog-grid {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: auto 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
       "header header header"
-      "blog blog author"; 
+      "blog blog author";
   }
 
   .blog-header {
@@ -121,20 +184,22 @@ h1 {
 
   .blog-author-wrapper {
     grid-area: author;
-    margin: 1rem;
+  }
+
+  .blog-wrapper {
+    grid-area: blog;
   }
 }
 
-
 @media (min-width: 992px) {
   .blog-grid {
-    display: grid; 
-    grid-template-columns:1fr 1fr 1fr 1fr; 
-    grid-template-rows: auto 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
       "header header header header"
-      "sidebar blog blog author"; 
+      "sidebar blog blog author";
   }
 
   .blog-sidebar {
@@ -143,8 +208,8 @@ h1 {
   }
 
   .sidebar-wrapper:hover {
-    color: #C69749;
-    text-shadow: 0px 0px 0.2em #C69749;
+    color: #c69749;
+    text-shadow: 0px 0px 0.2em #c69749;
   }
 
   .sidebar-title {
@@ -157,20 +222,19 @@ h1 {
   }
 
   .sidebar-date {
-    padding-left: 2em;
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
   }
 }
 
 @media (min-width: 1200px) {
   .blog-grid {
-    display: grid; 
-    grid-template-columns:1fr 300px 400px 400px 300px 1fr; 
-    grid-template-rows: auto 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
+    display: grid;
+    grid-template-columns: 1fr 300px 300px 300px 300px 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
       "header header header header header header"
-      ". sidebar blog blog author ."; 
+      ". sidebar blog blog author .";
   }
   .blog-list-image {
     max-width: 600px;

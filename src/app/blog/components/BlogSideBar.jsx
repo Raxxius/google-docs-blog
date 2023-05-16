@@ -18,8 +18,8 @@ export default function BlogSideBar(props) {
         className="sidebar-wrapper"
         key={`blog-${blog}`}
       >
-        <p className="sidebar-title">{title}</p>
-        <p className="sidebar-date">{date}</p>
+        <p className="sidebar-title sidebar-text">{title}</p>
+        <p className="sidebar-date sidebar-text">{date}</p>
       </Link>
     );
     blogs.push(returnValue);
