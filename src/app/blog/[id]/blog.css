@@ -2,7 +2,6 @@ body {
     background-color: black;
     background-image: linear-gradient(to right bottom, #000000, #130e11, #1d171d, #24202b, #282a3a);
     color: aliceblue;
-    padding: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -1,5 +1,6 @@
 import './blog.css'
 import BlogAuthor from "./components/BlogAuthor";
+import BlogHeader from './components/BlogHeader';
 import BlogList from "./components/BlogList";
 import BlogSideBar from "./components/BlogSideBar";
 
@@ -9,7 +10,7 @@ function App() {
 
   return (
     <div className="blog-grid">
-      <div className="blog-header">Header</div>
+      <BlogHeader />
       <BlogList url={url} />
       <BlogSideBar url={url} />
       <BlogAuthor />

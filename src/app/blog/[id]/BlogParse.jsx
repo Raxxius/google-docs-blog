@@ -49,12 +49,13 @@ export default function BlogParse(item) {
 
         let className = item.className[num]
 
+        // specific coding to add legend className to picture legends.
         if (tag === "legend") {
             className = tag
             tag = "p"
         }
 
-        // text element
+        // generic return element h1, h2, h3, etc
         return (React.createElement(
             tag,
             {className: className},
