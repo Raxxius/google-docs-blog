@@ -1,10 +1,9 @@
 import googleWebFetch from "@/apis/googleWebFetch";
 import BlogParse from "./BlogParse.jsx";
 import BlogAuthor from "../components/BlogAuthor.jsx";
-import BlogHeader from "../components/BlogHeader.jsx"
+import BlogHeader from "../components/BlogHeader.jsx";
 import "./blog.css";
 import { use } from "react";
-
 
 export default function (props) {
   //specific datafetch
@@ -14,13 +13,15 @@ export default function (props) {
   const fullUrl = `${url}?id=${fileId}`;
   const data = use(googleWebFetch(fullUrl));
 
-  const blogs = data.map((blogElement) => {
+  const blogs = [];
+
+  for (let blog in blogs) {
     return (
       <>
-        <BlogParse {...blogElement} />
+        <BlogParse {...blogs[blog]} key={`blog-article-${blog}`} />
       </>
     );
-  });
+  }
 
   return (
     <div className="blog-article-grid">

@@ -16,6 +16,7 @@ export default function BlogSideBar(props) {
       <Link
         href={`/blog/${encodeURIComponent(fileId)}`}
         className="sidebar-wrapper"
+        key={`blog-${blog}`}
       >
         <p className="sidebar-title">{title}</p>
         <p className="sidebar-date">{date}</p>
@@ -27,7 +28,7 @@ export default function BlogSideBar(props) {
   return (
     <div className="blog-sidebar">
       <div className="blog-sidebar-header">
-        <h1>click a link to head to the relevant blog</h1>
+        <h1>Index</h1>
       </div>
       <div>{blogs}</div>
     </div>
