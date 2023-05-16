@@ -1,4 +1,3 @@
-import { content } from "googleapis/build/src/apis/content";
 import React from "react"
 
 export default function BlogParse(item) {

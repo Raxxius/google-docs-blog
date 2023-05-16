@@ -1,6 +1,6 @@
-import Moon from "../assets/icons/moon.jsx";
-import Sun from "../assets/icons/sun.jsx";
-import "./Navbar.css"
+import Moon from "../../assets/icons/moon.jsx";
+import Sun from "../../assets/icons/sun.jsx";
+import "@/app/components/serverside/Navbar.css"
 
 const Navbar = (props) => {
   const navbarstyle = {
@@ -11,7 +11,7 @@ const Navbar = (props) => {
 
   const DarkModeButton = (props) => {
     return (
-      <button className="darkMode-btn" onClick={props.handleOnClick}>
+      <button className="darkMode-btn" onClick={props.handleDarkmode}>
         {props.darkMode ? (
           <Sun
             style={{
@@ -32,7 +32,7 @@ const Navbar = (props) => {
       <DarkModeButton
         darkMode={props.darkMode}
         setDarkMode={props.setDarkMode}
-        handleOnClick={props.handleOnClick}
+        handleDarkmode={props.handleDar}
       />
     </div>
   );

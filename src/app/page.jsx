@@ -1,17 +1,22 @@
-import styles from './page.module.css'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Project from './components/Project'
-import Contact from './components/Contact'
+import Navbar from './components/serverside/Navbar'
+import Hero from './components/serverside/Hero'
+import About from './components/serverside/About'
+import Project from './components/serverside/Project'
+import Contact from './components/serverside/Contact'
+import "./App.css"
 
 export default function Home() {
-  const darkMode = true
+  let darkMode = true
+
+  const handleDarkMode = () => {
+    darkMode = !darkMode
+  } 
 
   return (
-    <main className={styles.main}>
+    <main className="main">
       <Navbar
         darkMode={darkMode}
+        handleDarkMode={handleDarkMode}
       />
       <Hero darkMode={darkMode} />
       <About />

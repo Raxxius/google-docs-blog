@@ -1,8 +1,8 @@
 import googleWebFetch from "@/apis/googleWebFetch";
 import BlogParse from "./BlogParse.jsx";
-import BlogAuthor from "../components/BlogAuthor.jsx";
-import BlogHeader from "../components/BlogHeader.jsx";
-import Navbar from "@/app/components/Navbar.jsx";
+import BlogAuthor from "../components/serverside/BlogAuthor.jsx";
+import BlogHeader from "../components/serverside/BlogHeader.jsx";
+import Navbar from "../../components/serverside/Navbar.jsx"
 import "../blog.css";
 import { use } from "react";
 
