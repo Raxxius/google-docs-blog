@@ -71,12 +71,16 @@ const Clouds = (props) => {
   }
 
   // generate a number clouds based on screen width
-  // small/phone = 2
-  // medium/tablet = 4
-  // large/desktop = 6
+  // small/phone = 5
+  // medium/tablet = 7
+  // large/desktop = 12
 
-  const numberOfClouds =
-    window.innerWidth <= 500 ? 5 : window.innerWidth >= 900 ? 12 : 7;
+  let numberOfClouds = 0
+
+  if (window) {
+    numberOfClouds =
+      window.innerWidth <= 500 ? 5 : window.innerWidth >= 900 ? 12 : 7;
+  }
 
   function initialClouds(numberOfClouds, setClouds) {
     let initialClouds = [];
