@@ -3,14 +3,14 @@ import Hero from './components/serverside/Hero'
 import About from './components/serverside/About'
 import Project from './components/serverside/Project'
 import Contact from './components/serverside/Contact'
+import DarkMode from './assets/clientside/darkmode/darkmode'
 import "./App.css"
 
 export default function Home() {
-  let darkMode = true
+  let darkMode=   <DarkMode />
 
-  const handleDarkMode = () => {
-    darkMode = !darkMode
-  } 
+  let handleDarkMode = {}
+
 
   return (
     <main className="main">

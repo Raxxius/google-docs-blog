@@ -1,6 +1,6 @@
 import Loader from "../../assets/loader/Loader";
 import Starfield from "../../assets/stars/Starfield";
-import Clouds from "../../assets/clientside/Clouds";
+import Clouds from "../clientside/clouds/clouds";
 
 const Hero = (props) => {
   const heroStyle = {
@@ -13,7 +13,7 @@ const Hero = (props) => {
     <div className="hero" style={heroStyle}>
       {props.darkMode ? <Starfield /> : ""}
       <div className="hero-cloud-box">
-        <Clouds darkMode={props.darkMode} />
+         <Clouds darkMode={props.darkMode} />
       </div>
       <div className="hero-loader-box">
         <Loader darkMode={props.darkMode} />
