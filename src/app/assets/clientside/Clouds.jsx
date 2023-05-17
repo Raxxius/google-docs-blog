@@ -75,12 +75,8 @@ const Clouds = (props) => {
   // medium/tablet = 7
   // large/desktop = 12
 
-  let numberOfClouds = 0
-
-  if (window) {
-    numberOfClouds =
+  const numberOfClouds = 
       window.innerWidth <= 500 ? 5 : window.innerWidth >= 900 ? 12 : 7;
-  }
 
   function initialClouds(numberOfClouds, setClouds) {
     let initialClouds = [];
