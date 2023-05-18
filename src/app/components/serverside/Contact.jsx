@@ -1,7 +1,7 @@
 "use client";
 
 import { send } from "@emailjs/browser";
-import Email from "../../assets/icons/email.svg";
+import Email from "../../assets/icons/email.jsx";
 import { useState } from "react";
 
 const Contact = (props) => {
@@ -73,7 +73,7 @@ const Contact = (props) => {
           className="contact-email"
           style={contactEmailStyle}
         >
-          <img src={Email} className="contact-btn-icon" alt="email"></img>Let's
+          <Email className="contact-btn-icon" alt="email"/>Let's
           create something together
         </a>
       </div>
