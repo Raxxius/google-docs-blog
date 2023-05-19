@@ -11,15 +11,15 @@ const About = () => {
           src={camArt.src}
         ></img>
       </div>
-      <p className="about-h2">
+      <p className="about-text">
         I'm a curious person who enjoys solving problems
       </p>
-      <p className="about-h2">I used to do research into Medical devices</p>
-      <p className="about-h2">I worked on building heart valves</p>
-      <p className="about-h2">
+      <p className="about-text">I used to do research into Medical devices</p>
+      <p className="about-text">I worked on building heart valves</p>
+      <p className="about-text">
         I've worked in technology transfer and medical devices
       </p>
-      <h2 className="about-h2">
+      <h2 className="about-text">
         Now as a FullStack Engineer, I enjoy developing innovative solutions to
         complex technical problems
       </h2>
