@@ -6,7 +6,7 @@ import Navbar from "../../components/serverside/Navbar.jsx"
 import "../blog.css";
 import { use } from "react";
 
-export default function (props) {
+export default function Page (props) {
   //specific datafetch
   const url =
     "https://script.google.com/macros/s/AKfycbwl1n76uCLYijMbXM5Z5b99J3gDWROj9Y1nzco3TKgg32H2G8IvBneeoUAgavugzCZuJQ/exec";
