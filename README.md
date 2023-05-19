@@ -5,6 +5,9 @@ Photo by <a href="https://unsplash.com/@alexacea?utm_source=unsplash&utm_medium=
 
   https://svg2jsx.com/
 
+https://favicon.io/favicon-generator/
+
+
   packages:
   emotion/css https://emotion.sh/
 https://www.npmjs.com/package/@emailjs/browser
