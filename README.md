@@ -11,3 +11,5 @@ https://favicon.io/favicon-generator/
   packages:
   emotion/css https://emotion.sh/
 https://www.npmjs.com/package/@emailjs/browser
+
+sharp 
