@@ -58,7 +58,7 @@ const Clouds = (props) => {
   // medium/tablet = 7
   // large/desktop = 12
 
-  let numberOfClouds = 0
+  let numberOfClouds = 0;
 
   const cloudColour = () => {
     const cloudFronts = document.querySelectorAll(".cloud-front");
@@ -81,7 +81,7 @@ const Clouds = (props) => {
   function initialClouds(numberOfClouds, setClouds) {
     let initialClouds = [];
     for (let i = 0; i < numberOfClouds; i++) {
-      // add cloud function?
+      // add cloud function
       const xCoord = `${-20 + Math.floor(Math.random() * 110)}vw`;
       addCloud(initialClouds, setClouds, xCoord);
     }
@@ -89,10 +89,11 @@ const Clouds = (props) => {
   }
 
   // generate a number of <Cloud /> based on numberOfClouds
-  const [clouds, setClouds] = useState(initialClouds(numberOfClouds));
+  const [clouds, setClouds] = useState();
 
   useEffect(() => {
-    numberOfClouds = window.innerWidth <= 500 ? 5 : window.innerWidth >= 900 ? 12 : 7;
+    numberOfClouds =
+      window.innerWidth <= 500 ? 1 : window.innerWidth >= 900 ? 7 : 1;
     const IState = initialClouds(numberOfClouds, setClouds);
     setClouds(IState);
   }, []);
