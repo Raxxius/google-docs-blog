@@ -95,6 +95,19 @@ video {
   src: url("./assets/fonts/NothingYouCouldDo-Regular.ttf");
 }
 
+/* Section positioning */
+.main {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10vh;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.section {
+  height: 80vh;
+}
+
 /* Navbar Styling */
 
 .navbar {
@@ -120,8 +133,7 @@ video {
 /** Hero styling */
 
 .hero {
-  height: 90vh;
-  padding-top: 10vh;
+  margin-top: 10vh;
 }
 
 .hero-cloud-box {
@@ -175,8 +187,9 @@ video {
 }
 
 .starmap {
-  height: auto;
+  height: 80vh;
   width: 100%;
+  overflow: hidden;
   position: absolute;
   opacity: 1;
   animation: appear 2s linear forwards;
@@ -207,7 +220,6 @@ video {
 /** Contact styling */
 
 .contact {
-  height: 80vh;
   margin-bottom: 10vh;
   display: flex;
   flex-direction: column;

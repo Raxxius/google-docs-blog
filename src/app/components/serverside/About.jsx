@@ -2,7 +2,7 @@ import camArt from "../../assets/images/keith-camart.png";
 
 const About = () => {
   return (
-    <div className="About">
+    <section className="about section">
       <h1 className="about-h1">Hi!, I'm Keith</h1>
       <div className="about-photo-box">
         <img
@@ -26,7 +26,7 @@ const About = () => {
       <p className="about-text">My tech stack is ever evolving</p>
       <p className="about-text">Currently I work with React, NodeJS, NextJS, Django</p>
       <h2>Outside work I am a keen climber, it's puzzle solving on a verticle surface!</h2>
-    </div>
+    </section>
   );
 };
 

@@ -10,7 +10,7 @@ const Hero = (props) => {
   };
 
   return (
-    <div className="hero" style={heroStyle}>
+    <section className="hero section" style={heroStyle}>
       {props.darkMode ? <Starfield /> : ""}
       <div className="hero-cloud-box">
          <Clouds darkMode={props.darkMode} />
@@ -23,7 +23,7 @@ const Hero = (props) => {
         <h2 className="hero-subtext">Full Stack Developer</h2>
         <h3 className="hero-tagline">Modern React Solutions</h3>
       </div>
-    </div>
+    </section>
   );
 };
 

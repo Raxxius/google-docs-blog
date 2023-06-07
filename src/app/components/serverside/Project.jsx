@@ -39,10 +39,10 @@ const Project = () => {
   });
 
   return (
-    <div className="project">
+    <section className="project section">
       <h2 className="projects-title">Porfolio</h2>
       {projects}
-    </div>
+    </section>
   );
 };
 

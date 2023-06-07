@@ -1,8 +1,8 @@
 function StarLoop(colour, stars, number1, number2) {
     const starNum = number1 + Math.floor(Math.random() * number2);
     for (let star = 0; star < starNum; star++) {
-        let starX = Math.floor(Math.random() * 1000) / 10
-        let starY = Math.floor(Math.random() * 900) / 10
+        let starX = Math.floor(Math.random() * 100)
+        let starY = Math.floor(Math.random() * 80)
         stars.push(starX + "vw " + starY + "vh " + colour);
     };
     return stars;
