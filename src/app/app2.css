@@ -121,25 +121,20 @@ section::-webkit-scrollbar {
 
 /** Hero styling */
 
-/*
-.starmap {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  overflow: hidden;
+.hero-loader-box {
+    margin-top: 30vh;
+}
+
+.hero-title {
+    margin-top: 10vh;
+    margin-left: 1rem;
+}
+
+.hero-name {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .hero-cloud-box {
-  max-width: 100vw;
-  height: 80vh;
-  overflow: hidden;
-  position: absolute;
-}
-
-.hero-loader-box {
     position: absolute;
-    margin-top: 40vh;
-    margin-left: 20wv;
-    margin-right: auto;
 }
-*/
