@@ -1,0 +1,112 @@
+.navbar {
+  position: fixed;
+  display: flex;
+  height: 10vh;
+  width: 100vw;
+  z-index: 999;
+  transition: background-color 2s, color 2s;
+}
+
+.menu-btn {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  margin: 1rem;
+  border: 0;
+  border-radius: 5px;
+  background-color: black;
+}
+
+.hamburger {
+  height: 32px;
+  width: 32px;
+  padding-top: 4px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.hamburger:hover {
+  color: orange;
+}
+
+.darkMode-btn {
+  height: 40px;
+  width: 40px;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: 2rem;
+  border: none;
+  background-color: grey;
+  border-radius: 0.5rem;
+}
+
+.links-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  z-index: 3;
+}
+
+.links-closer {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+}
+
+.link-item {
+  background-color: black;
+  color: aliceblue;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.8rem;
+  border-bottom: 1px solid aliceblue;
+  animation-name: fadeInMenu;
+  animation-duration: 1s;
+}
+
+.link-item-bottom {
+  border: none;
+}
+
+.link-item:hover {
+  color: orange;
+  text-shadow: 0 0 2px orange;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeInMenu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+/* 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    font-size: 1.5em;
+    width: 100vw;
+    top: 0;
+    position: fixed;
+    z-index: 9999;
+  }
+  
+  .darkMode-btn {
+    height: 2.5em;
+    width: 2.5em;
+    border: none;
+    background-color: grey;
+    border-radius: 0.5em;
+  }
+  */

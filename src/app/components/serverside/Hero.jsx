@@ -10,7 +10,7 @@ const Hero = (props) => {
   };
 
   return (
-    <section className="hero section" style={heroStyle}>
+    <section className="hero section" id="hero" style={heroStyle}>
       {props.darkMode ? <Starfield /> : ""}
       <div className="hero-cloud-box">
          <Clouds darkMode={props.darkMode} />

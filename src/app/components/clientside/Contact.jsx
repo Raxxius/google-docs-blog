@@ -64,7 +64,7 @@ const Contact = (props) => {
   };
 
   return (
-    <section className="contact" style={contactStyle}>
+    <section className="contact" id="contact" style={contactStyle}>
       <div className="contact-flex-one" style={contactFlexStyle}>
         <h1 className="contact-one-h1">Want to create something together?</h1>
         <h2 className="contact-one-h2">Drop me a line!</h2>

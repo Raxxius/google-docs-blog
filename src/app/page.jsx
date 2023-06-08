@@ -1,8 +1,8 @@
-import Navbar from "./components/serverside/Navbar";
+import Navbar from "./components/clientside/Navbar";
 import Hero from "./components/serverside/Hero";
 import About from "./components/serverside/About";
 import Project from "./components/serverside/Project";
-import Contact from "./components/serverside/Contact";
+import Contact from "./components/clientside/Contact";
 import DarkMode from "./assets/clientside/darkmode/darkmode";
 import "./app2.css";
 
