@@ -1,16 +1,16 @@
 function StarLoop(colour, stars, number1, number2) {
     const starNum = number1 + Math.floor(Math.random() * number2);
     for (let star = 0; star < starNum; star++) {
-        let starX = Math.floor(Math.random() * 100)
-        let starY = Math.floor(Math.random() * 80)
-        stars.push(starX + "vw " + starY + "vh " + colour);
+        let starX = Math.floor(Math.random() * 1000)/10
+        let starY = Math.floor(Math.random() * 1000)/10
+        stars.push(starX + "vw " + starY + "vh" + colour);
     };
     return stars;
 }
 
 function StarMap() {
     let smallstars = StarGeneration("small", 200, 400);
-    let medstars = StarGeneration("med", 100, 200);
+    let medstars = StarGeneration("med", 50, 100);
     let largestars = StarGeneration("large", 10, 10);
     return (
         [smallstars, medstars, largestars]
