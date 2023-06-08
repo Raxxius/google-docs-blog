@@ -11,6 +11,10 @@ const Navbar = (props) => {
   const navbarstyle = {
     color: props.darkMode ? "lightcyan" : "black",
   };
+  const linksStyle = {
+    backgroundColor: props.darkMode ? "black" : "grey",
+    color: props.darkMode ? "aliceblue" : "black",
+  };
 
   /* Button activity */
   const handleShowList = (e) => {
@@ -18,8 +22,8 @@ const Navbar = (props) => {
     setShowMenu(!showMenu);
   };
   const handleCloseList = () => {
-    setShowMenu(false)
-  }
+    setShowMenu(false);
+  };
 
   const DarkModeButton = (props) => {
     return (
@@ -41,29 +45,40 @@ const Navbar = (props) => {
   /* Core return */
   return (
     <div className="navbar" style={navbarstyle}>
+      <div className="navbar-fill" style={linksStyle}></div>
       <button className="menu-btn" onClick={handleShowList}>
         <Hamburger fill={props.darkMode ? "lightcyan" : "black"} />
       </button>
-      <div className={showMenu? "links-closer" : "hidden"} onClick={handleCloseList}></div>
+      <div
+        className={showMenu ? "links-closer" : "hidden"}
+        onClick={handleCloseList}
+      ></div>
       <div className="links-list">
-        <a href="#hero" className={showMenu ? "link-item" : "link-item hidden"}>
+        <a
+          href="#hero"
+          className={showMenu ? "link-item" : "link-item hidden"}
+          style={linksStyle}
+        >
           Home
         </a>
         <a
           href="#about"
           className={showMenu ? "link-item" : "link-item hidden"}
+          style={linksStyle}
         >
           About
         </a>
         <a
           href="#project"
           className={showMenu ? "link-item" : "link-item hidden"}
+          style={linksStyle}
         >
           Portfolio
         </a>
         <a
           href="#contact"
           className={showMenu ? "link-item" : "link-item hidden"}
+          style={linksStyle}
         >
           Contact
         </a>
@@ -74,6 +89,7 @@ const Navbar = (props) => {
               ? "link-item link-item-bottom"
               : "link-item link-item-bottom hidden"
           }
+          style={linksStyle}
         >
           Blog
         </a>
