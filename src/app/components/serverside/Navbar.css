@@ -1,4 +1,32 @@
 .navbar {
+  position: fixed;
+  display: flex;
+  height: 10vh;
+  width: 100vw;
+  z-index: 999;
+  background-color: none;
+  transition: background-color 2s, color 2s;
+}
+
+.hamburger {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 1rem;
+}
+
+.darkMode-btn {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: 1rem;
+  border: none;
+  background-color: grey;
+  border-radius: 0.5em;
+}
+
+/* 
+.navbar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,3 +45,4 @@
     background-color: grey;
     border-radius: 0.5em;
   }
+  */

@@ -1,12 +1,11 @@
 import Moon from "../../assets/icons/moon.jsx";
 import Sun from "../../assets/icons/sun.jsx";
-import "@/app/components/serverside/Navbar.css"
+import Hamburger from "../../assets/icons/Hamburger.jsx";
+import "@/app/components/serverside/Navbar.css";
 
 const Navbar = (props) => {
   const navbarstyle = {
-    backgroundColor: props.darkMode ? "black" : "lightgrey",
     color: props.darkMode ? "lightcyan" : "black",
-    transition: "background-color 2s, color 2s",
   };
 
   const DarkModeButton = (props) => {
@@ -28,7 +27,8 @@ const Navbar = (props) => {
 
   return (
     <div className="navbar" style={navbarstyle}>
-      NavBar
+      <Hamburger fill={props.darkMode ? "lightcyan" : "black"} />
+
       <DarkModeButton
         darkMode={props.darkMode}
         setDarkMode={props.setDarkMode}
