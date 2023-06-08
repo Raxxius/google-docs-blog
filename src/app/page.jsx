@@ -8,13 +8,14 @@ import "./app2.css";
 
 export default function Home() {
   let darkMode = <DarkMode />;
-  /*
-  <Navbar darkMode={darkMode} handleDarkMode={handleDarkMode} />
-  */
+
+  let handleDarkMode = "Handling darkmode"
+
 
   return (
     <>
       <div className="main">
+        <Navbar darkMode={darkMode} handleDarkMode={handleDarkMode} />
         <Hero darkMode={darkMode} />
         <About />
         <Project />

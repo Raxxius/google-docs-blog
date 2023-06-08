@@ -121,20 +121,28 @@ section::-webkit-scrollbar {
 
 /** Hero styling */
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hero-loader-box {
     margin-top: 30vh;
 }
 
 .hero-title {
-    margin-top: 10vh;
-    margin-left: 1rem;
+  position: relative;
+    margin-top: 20vh;
 }
 
 .hero-name {
     font-size: 1.5rem;
-    padding-bottom: 1rem;
-}
+    padding-bottom: 1rem
+  }
 
 .hero-cloud-box {
     position: absolute;
+    margin-top: 20vh;
+    left: 0%;
 }
