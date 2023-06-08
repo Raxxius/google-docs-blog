@@ -174,3 +174,10 @@ section::-webkit-scrollbar {
   position: absolute;
   filter: blur(1px);
 }
+
+@media (min-width: 768px) {
+  section {
+    height: 90vh;
+    padding-top: 10vh;
+  }
+}
