@@ -46,7 +46,7 @@ const handleAnimationEnd = (e, setState) => {
     const newCloudState = clouds.filter((cloud) => {
       return cloud.key !== target;
     });
-    const xCoord = `0`;
+    const xCoord = `-20`;
     addCloud(newCloudState, setState, xCoord);
     return newCloudState;
   });
