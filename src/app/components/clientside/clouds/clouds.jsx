@@ -16,7 +16,6 @@ const cloudStyle = () => {
     width: width,
     height: height,
     initalTime: time,
-    key: key,
     cloudID: key,
   };
 };
@@ -25,11 +24,13 @@ const cloudStyle = () => {
 
 const addCloud = (state, setState, xCoord) => {
   const style = cloudStyle();
+  const key = Math.random();
   const time = `${
     style.initalTime * ((140 - parseInt(xCoord.replace(/\D/g, ""))) / 100)
   }s`;
   state.push(
     <Cloud
+      key={key}
       {...style}
       time={time}
       xCoord={xCoord}
