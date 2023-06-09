@@ -6,7 +6,6 @@ import "@/app/components/clientside/Navbar.css";
 import { useState } from "react";
 
 const Navbar = (props) => {
-  console.log(props);
   const [showMenu, setShowMenu] = useState(false);
 
   /* Button activity */
