@@ -2,7 +2,7 @@ import googleWebFetch from "@/apis/googleWebFetch";
 import BlogParse from "./BlogParse.jsx";
 import BlogAuthor from "../components/serverside/BlogAuthor.jsx";
 import BlogHeader from "../components/serverside/BlogHeader.jsx";
-import Navbar from "../../components/clientside/Navbar.jsx"
+import Navbar from "../components/serverside/BlogNavBar.jsx"
 import "../blog.css";
 import { use } from "react";
 

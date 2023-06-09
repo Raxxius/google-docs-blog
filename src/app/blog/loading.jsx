@@ -1,5 +1,5 @@
 import "./blog.css";
-import Navbar from "../components/clientside/Navbar";
+import Navbar from "./components/serverside/BlogNavBar";
 import BlogAuthor from "./components/serverside/BlogAuthor";
 import BlogHeader from "./components/serverside/BlogHeader";
 import Loader from "./components/serverside/Loader"
