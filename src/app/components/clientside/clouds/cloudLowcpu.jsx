@@ -21,7 +21,7 @@ function Cloud(props) {
     const heightChange = Math.floor(Math.random()*5 +1) 
     return keyframes`
     0% {
-      transform: translate(-${140-xNumber}vw, ${heightChange}vh);
+      transform: translate(-${190-xNumber}vw, ${heightChange}vh);
     }
     100% {
       transform: translate(0, 0);
