@@ -15,7 +15,7 @@ const Hero = (props) => {
     <section className="hero section" id="hero" style={heroStyle}>
       {props.darkMode ? <Starfield /> : ""}
       <div className="hero-cloud-box">
-        {/*<Clouds darkMode={props.darkMode} />*/}
+        <Clouds darkMode={props.darkMode} />
       </div>
       <div className="hero-loader-box">
         <Loader darkMode={props.darkMode} />
