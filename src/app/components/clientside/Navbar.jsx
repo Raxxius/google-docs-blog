@@ -8,13 +8,6 @@ import { useState } from "react";
 
 const Navbar = (props) => {
   const [showMenu, setShowMenu] = useState(false);
-  const navbarstyle = {
-    color: props.darkMode ? "lightcyan" : "black",
-  };
-  const linksStyle = {
-    backgroundColor: props.darkMode ? "black" : "grey",
-    color: props.darkMode ? "aliceblue" : "black",
-  };
 
   /* Button activity */
   const handleShowList = (e) => {
