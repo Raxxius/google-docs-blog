@@ -61,16 +61,37 @@
   text-align: center;
   padding: 0.8rem;
   border-bottom: 1px solid aliceblue;
+  color: black;
+  background-color: grey;
   animation-name: fadeInMenu;
   animation-duration: 1s;
+}
+
+.link-item:hover {
+  color: orange;
+  text-shadow: 0 0 5px;
 }
 
 .link-item-bottom {
   border: none;
 }
 
+.link-item-dark {
+ color: lightcyan;
+ background-color: black;
+}
+
 .hidden {
   display: none;
+}
+
+.nav-dark {
+  color: lightcyan;
+}
+
+.nav-fill-dark {
+  color: lightcyan;
+  background-color: black;
 }
 
 @keyframes fadeInMenu {
@@ -112,12 +133,12 @@
 }
 
 @media (min-width: 992px) {
- .links-list {
-  margin-left: auto;
-  margin-right: 10rem;
- }
- .darkMode-btn {
-  margin-right: auto;
-  margin-left: 10rem;
- }
+  .links-list {
+    margin-left: auto;
+    margin-right: 10rem;
+  }
+  .darkMode-btn {
+    margin-right: auto;
+    margin-left: 10rem;
+  }
 }

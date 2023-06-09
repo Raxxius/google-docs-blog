@@ -44,8 +44,10 @@ const Navbar = (props) => {
 
   /* Core return */
   return (
-    <div className="navbar" style={navbarstyle}>
-      <div className="navbar-fill" style={linksStyle}></div>
+    <div className={props.darkMode ? "navbar nav-dark" : "navbar"}>
+      <div
+        className={props.darkMode ? "navbar-fill nav-fill-dark" : "navbar-fill"}
+      ></div>
       <button className="menu-btn" onClick={handleShowList}>
         <Hamburger fill={props.darkMode ? "lightcyan" : "black"} />
       </button>
@@ -56,29 +58,57 @@ const Navbar = (props) => {
       <div className="links-list">
         <a
           href="#hero"
-          className={showMenu ? "link-item" : "link-item hidden"}
-          style={linksStyle}
+          className={
+            showMenu
+              ? props.darkMode
+                ? "link-item link-item-dark"
+                : "link-item"
+              : props.darkMode
+              ? "link-item link-item-dark hidden"
+              : "link-item hidden"
+          }
         >
           Home
         </a>
         <a
           href="#about"
-          className={showMenu ? "link-item" : "link-item hidden"}
-          style={linksStyle}
+          className={
+            showMenu
+              ? props.darkMode
+                ? "link-item link-item-dark"
+                : "link-item"
+              : props.darkMode
+              ? "link-item link-item-dark hidden"
+              : "link-item hidden"
+          }
         >
           About
         </a>
         <a
           href="#project"
-          className={showMenu ? "link-item" : "link-item hidden"}
-          style={linksStyle}
+          className={
+            showMenu
+              ? props.darkMode
+                ? "link-item link-item-dark"
+                : "link-item"
+              : props.darkMode
+              ? "link-item link-item-dark hidden"
+              : "link-item hidden"
+          }
         >
           Portfolio
         </a>
         <a
           href="#contact"
-          className={showMenu ? "link-item" : "link-item hidden"}
-          style={linksStyle}
+          className={
+            showMenu
+              ? props.darkMode
+                ? "link-item link-item-dark"
+                : "link-item"
+              : props.darkMode
+              ? "link-item link-item-dark hidden"
+              : "link-item hidden"
+          }
         >
           Contact
         </a>
@@ -86,10 +116,13 @@ const Navbar = (props) => {
           href="#blog"
           className={
             showMenu
-              ? "link-item link-item-bottom"
-              : "link-item link-item-bottom hidden"
+              ? props.darkMode
+                ? "link-item link-item-dark link-item-bottom"
+                : "link-item"
+              : props.darkMode
+              ? "link-item link-item-dark hidden link-item-bottom"
+              : "link-item hidden"
           }
-          style={linksStyle}
         >
           Blog
         </a>
