@@ -20,9 +20,8 @@ export default function Home() {
           setDarkMode={setDarkMode}
         />
         <Hero darkMode={darkMode} />
-        {/* 
-        <About />
-        <Project />*/}
+        <About darkMode={darkMode} />
+        {/*<Project darkMode={darkMode} />*/}
         <Contact darkMode={darkMode} />
       </div>
     </>

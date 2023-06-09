@@ -6,9 +6,11 @@ import "./Hero.css";
 
 const Hero = (props) => {
   const heroStyle = {
-    backgroundColor: props.darkMode ? "#16151d" : "skyblue",
+    background: props.darkMode
+      ? "linear-gradient(180deg, rgba(22,21,29,1) 25%, rgba(43,41,56,1) 95%, rgba(51,29,29,0.989233193277311) 100%"
+      : "linear-gradient(180deg, rgba(53,135,255,1) 17%, rgba(107,151,251,1) 50%, rgba(119,173,251,1) 100%)",
     color: props.darkMode ? "lightcyan" : "#140c10",
-    transition: "background-color 2s, color 2s",
+    transition: "background 2s, color 2s",
   };
 
   return (

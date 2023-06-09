@@ -47,5 +47,35 @@
 
 .about-photo {
     width: 60vw;
+    max-width: 255px;
     border-radius: 5em;
+}
+
+
+@media (min-width: 768px) {
+    .about-text {
+       margin-left: 20vw;
+       margin-right: auto;
+       max-width: 450px;
+    }
+    
+    .about-text-dark {
+        margin-left: 20vw;
+        margin-right: auto;
+        max-width: 450px;
+    }
+
+    .about-photo-box {
+        margin-top: 3vh;
+    }
+    .about-h1 {
+        margin-top: 2vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .about-text {
+        width: 450px;
+        text-align: start;
+    }
 }
