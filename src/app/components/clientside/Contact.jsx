@@ -3,6 +3,7 @@
 import { send } from "@emailjs/browser";
 import Email from "../../assets/icons/email.jsx";
 import { useState } from "react";
+import './contact.css'
 
 const Contact = (props) => {
   const [formData, setFormData] = useState({
