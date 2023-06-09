@@ -54,3 +54,17 @@
     position: absolute;
     filter: blur(1px);
   }
+
+  @media (min-width: 768px) {
+    .hero {
+      align-items: start;
+    }
+    .hero-loader-box {
+      margin-left: 30vw;
+    }
+    .hero-title {
+      margin-left: 30vw;
+    }
+  }
+  
+  

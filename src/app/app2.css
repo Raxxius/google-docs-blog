@@ -124,14 +124,5 @@ section::-webkit-scrollbar {
     height: 90vh;
     padding-top: 10vh;
   }
-  .hero {
-    align-items: start;
-  }
-  .hero-loader-box {
-    margin-left: 30vw;
-  }
-  .hero-title {
-    margin-left: 30vw;
-  }
 }
 
