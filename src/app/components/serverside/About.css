@@ -1,0 +1,51 @@
+
+/* about styling */
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-dark {
+    background: rgb(44,42,59);
+    background: linear-gradient(118deg, rgba(44,42,59,1) 17%, rgba(22,21,29,1) 50%, rgba(44,42,59,1) 100%);
+}
+
+.about-h1 {
+    margin-top: 0.2em;
+    text-align: center;
+    margin-bottom: 0.4em;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.about-h1-dark {
+    font-weight: 400;
+    color: aliceblue;
+}
+
+.about-text {
+    padding: 1em;
+    font-weight: 600;
+}
+
+.about-text-dark {
+    color:aliceblue;
+    font-weight: 400;
+    padding: 1em;
+}
+
+.about-photo-box {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 1rem;
+    border-radius: 5em;
+}
+
+.about-photo-box-dark {
+    color: aliceblue;
+}
+
+.about-photo {
+    width: 60vw;
+    border-radius: 5em;
+}
