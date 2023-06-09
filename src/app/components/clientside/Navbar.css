@@ -2,6 +2,7 @@
   position: fixed;
   display: flex;
   height: 10vh;
+  min-height: 40px;
   width: 100vw;
   z-index: 999;
   transition: background-color 2s, color 2s;

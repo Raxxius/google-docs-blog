@@ -1,5 +1,5 @@
 import "./blog.css";
-import Navbar from "../components/clientside/Navbar";
+import BlogNavBar from "./components/serverside/BlogNavBar";
 import BlogAuthor from "./components/serverside/BlogAuthor";
 import BlogHeader from "./components/serverside/BlogHeader";
 import BlogList from "./components/serverside/BlogList";
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <BlogNavBar />
       <div className="blog-grid">
         <BlogHeader />
         <BlogList url={url} />
