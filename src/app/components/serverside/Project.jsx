@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link";
 import googleWebFetch from "@/apis/googleWebFetch";
 import { use } from "react";

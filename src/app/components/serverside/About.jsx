@@ -1,3 +1,5 @@
+"use client"
+
 import camArt from "../../assets/images/keith-camart.png";
 
 const About = () => {
