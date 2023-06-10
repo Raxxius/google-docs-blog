@@ -94,7 +94,7 @@ const Clouds = (props) => {
 
   useEffect(() => {
     numberOfClouds =
-      window.innerWidth <= 500 ? 1 : window.innerWidth >= 900 ? 12 : 7;
+      window.innerWidth <= 500 ? 0 : window.innerWidth >= 900 ? 7 : 5;
     const IState = initialClouds(numberOfClouds, setClouds);
     setClouds(IState);
   }, []);
