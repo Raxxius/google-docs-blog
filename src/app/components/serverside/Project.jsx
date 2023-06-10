@@ -28,10 +28,13 @@ const ListItem = (props) => {
 };
 
 const Project = (props) => {
-  const url =
-    "https://script.google.com/macros/s/AKfycbyIdR8v2zqO6V1D4V1SrGw6DB32-w5s8ZJ_1FizPDx0n5s932Xa7cRABZC6RBDqo7SXKA/exec";
-  const data = use(googleWebFetch(url));
+  
+  // const url =
+  //   "https://script.google.com/macros/s/AKfycbyIdR8v2zqO6V1D4V1SrGw6DB32-w5s8ZJ_1FizPDx0n5s932Xa7cRABZC6RBDqo7SXKA/exec";
+  // const data = use(googleWebFetch(url));
 
+  const data = []
+  
   const projects = data.map((project) => {
     return (
       <>
