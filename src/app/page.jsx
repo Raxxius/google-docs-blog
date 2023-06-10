@@ -21,7 +21,7 @@ export default function Home() {
         />
         <Hero darkMode={darkMode} />
         <About darkMode={darkMode} />
-        {/*<Project darkMode={darkMode} />*/}
+        <Project darkMode={darkMode} />
         <Contact darkMode={darkMode} />
       </div>
     </>
