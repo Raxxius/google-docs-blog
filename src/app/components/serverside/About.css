@@ -40,6 +40,9 @@
     margin-right: auto;
     box-shadow: 0 0 1rem;
     border-radius: 5em;
+    width: 60vw;
+    max-width: 255px;
+    max-height: 340px;
 }
 
 .about-photo-box-dark {
@@ -70,11 +73,35 @@
         margin-top: 3vh;
     }
     .about-h1 {
-        margin-top: 2vh;
+        margin-top: 1em;
     }
 }
 
 @media (min-width: 992px) {
+
+    .about {
+        align-items: center;
+    }
+
+    .about-content-wrapper {
+        display: flex;
+        align-items: center;
+        width: 992px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .about-text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .about-photo-box {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .about-text {
         width: 450px;
         text-align: start;
