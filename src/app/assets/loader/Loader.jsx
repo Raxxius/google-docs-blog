@@ -2,12 +2,12 @@ import * as containerStyles from "./Loader.module.css";
 
 const Loader = (props) => {
   const style = {
-    "backgroundColor": !props.darkMode ? "black" : "lightcyan",
+    "backgroundColor": !props.darkMode ? "#06283D" : "lightcyan",
     transition: "background-color 2s, color 2s",
   };
 
   const style2 = {
-    color: !props.darkMode ? "black" : "lightcyan",
+    color: !props.darkMode ? "#06283D" : "lightcyan",
     transition: "color 2s"
   }
 
