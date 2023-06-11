@@ -1,7 +1,5 @@
 "use client";
 import Loader from "../../assets/loader/Loader";
-import Starfield from "../../assets/stars/Starfield";
-import Clouds from "../Background/clouds/clouds";
 import "./Hero.css";
 
 const Hero = (props) => {
@@ -12,10 +10,6 @@ const Hero = (props) => {
 
   return (
     <section className="hero section" id="hero" style={heroStyle}>
-      {props.darkMode ? <Starfield /> : ""}
-      <div className="hero-cloud-box">
-        <Clouds darkMode={props.darkMode} />
-      </div>
       <div className="hero-loader-box">
         <Loader darkMode={props.darkMode} />
       </div>

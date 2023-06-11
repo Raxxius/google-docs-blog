@@ -1,0 +1,11 @@
+.background {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+
+    background: linear-gradient(180deg, rgba(53,135,255,1) 17%, rgba(107,151,251,1) 50%, rgba(119,173,251,1) 100%)
+}
+
+.background-dark {
+    background: linear-gradient(180deg, rgba(22,21,29,1) 25%, rgba(43,41,56,1) 95%, rgba(51,29,29,0.989233193277311) 100%)
+}

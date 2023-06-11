@@ -5,11 +5,6 @@
     flex-direction: column;
 }
 
-.about-dark {
-    background: rgb(44,42,59);
-    background: linear-gradient(118deg, rgba(44,42,59,1) 17%, rgba(22,21,29,1) 50%, rgba(44,42,59,1) 100%);
-}
-
 .about-h1 {
     margin-top: 0.2em;
     text-align: center;
