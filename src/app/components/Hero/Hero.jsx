@@ -1,14 +1,11 @@
 "use client";
 import Loader from "../../assets/loader/Loader";
 import Starfield from "../../assets/stars/Starfield";
-import Clouds from "../clientside/clouds/clouds";
+import Clouds from "../Background/clouds/clouds";
 import "./Hero.css";
 
 const Hero = (props) => {
   const heroStyle = {
-    background: props.darkMode
-      ? "linear-gradient(180deg, rgba(22,21,29,1) 25%, rgba(43,41,56,1) 95%, rgba(51,29,29,0.989233193277311) 100%"
-      : "linear-gradient(180deg, rgba(53,135,255,1) 17%, rgba(107,151,251,1) 50%, rgba(119,173,251,1) 100%)",
     color: props.darkMode ? "lightcyan" : "#06283D",
     transition: "background 2s, color 2s",
   };

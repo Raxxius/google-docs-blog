@@ -75,7 +75,7 @@ const Project = (props) => {
   )
 }
 
-const Projects = () => {
+const Projects = (props) => {
   const projects = portfolio.map(project => {
     return (
       <Project 
@@ -85,7 +85,7 @@ const Projects = () => {
     )
   })
   return (
-    <section id="project" className='project'>
+    <section id="project" className={props.darkMode?'project project-dark':'project'}>
       <h1 className='project-title'>Here are some of my Projects</h1>
       <div className='projects'>
         {projects}

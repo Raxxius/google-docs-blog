@@ -1,12 +1,14 @@
 "use client";
 
-import Navbar from "./components/clientside/Navbar";
-import Hero from "./components/serverside/Hero";
-import About from "./components/serverside/About";
-import Project from "./components/serverside/Project";
-import Contact from "./components/clientside/Contact";
+import Background from "./components/Background/Background";
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import Project from "./components/Project/Project";
+import Contact from "./components/Contact/Contact";
 import "./app2.css";
 import { useState } from "react";
+
 
 export default function Home() {
   let [darkMode, setDarkMode] = useState(false);
@@ -15,6 +17,7 @@ export default function Home() {
   return (
     <>
       <div className="main">
+        <Background darkMode={darkMode}/>
         <Navbar
           darkMode={darkMode}
           setDarkMode={setDarkMode}

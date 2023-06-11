@@ -2,7 +2,7 @@
 import Moon from "../../assets/icons/moon.jsx";
 import Sun from "../../assets/icons/sun.jsx";
 import Hamburger from "../../assets/icons/Hamburger.jsx";
-import "@/app/components/clientside/Navbar.css";
+import "./Navbar.css";
 import { useState } from "react";
 
 const Navbar = (props) => {
