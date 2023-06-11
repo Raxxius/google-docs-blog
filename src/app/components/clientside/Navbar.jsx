@@ -19,9 +19,9 @@ const Navbar = (props) => {
   const Menu = (props) => {
     return (
       <>
-        <button className="menu-btn" onClick={handleShowList}>
+        <div className="menu-btn" onClick={handleShowList}>
           <Hamburger fill={props.darkMode ? "lightcyan" : "black"} />
-        </button>
+        </div>
         <div
           className={showMenu ? "links-closer" : "hidden"}
           onClick={handleCloseList}

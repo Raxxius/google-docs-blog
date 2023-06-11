@@ -1,54 +1,98 @@
-"use client"
+'use client'
+import './projects.css'
+import Image from 'next/image'
 
-import Link from "next/link";
-import googleWebFetch from "@/apis/googleWebFetch";
-import { use } from "react";
 
-const ListItem = (props) => {
-  console.log(props)
-  const title = props.title
-  const image = `/${props.image}`
-  const description = props.description
-  const keywords = props.keywords
-  const siteLink = props.siteLink
-  const github = props.github
-  return (
-    <div className="project-list-item">
-      <h2 className="project-list-title">{title}</h2>
-      <Link href={siteLink} className="project-list-link" target="_blank">
-        <img src={image} alt={title}  />
-      </Link>
-      <p className="project-list-description">{description}</p>
-      <p className="project-list-list">{keywords}</p>
-      <Link href={github} className="project-list-github" target="_blank">
-        <p className="project-list-github">Github</p>
-      </Link>
-    </div>
-  );
-};
+// List of projects //
 
+const portfolio = [{
+    id: 1,
+    img: require('../../assets/projects/climbing-website.png'),
+    alt: "climbing website",
+    title: "Getting into Climbing",
+    info: "Basic website for those interested in learning to climb",
+    tags: "HTML, CSS",
+    github: "https://github.com/Raxxius/climbing_website",
+    website: "https://raxxius.github.io/climbing_website/"
+  },
+  {
+    id: 2,
+    img: require('../../assets/projects/photo-website.png'),
+    alt: "photo website",
+    title: "Photo Website",
+    info: "Custom JS hero picture and sortable galleries",
+    tags: "HTML, CSS, JavaScript",
+    github: "https://github.com/Raxxius/PhotoWebsite",
+    website: "https://raxxius.github.io/PhotoWebsite/"
+  },
+  {
+    id: 3,
+    img: require('../../assets/projects/tribute-page.png'),
+    alt: "tribute website",
+    title: "Tribute website",
+    info: "FreeCodeCamp responsive web design course",
+    tags: "HTML, CSS",
+    github: "https://github.com/Raxxius/Tribute_page_Alex_Honnold",
+    website: "https://raxxius.github.io/Tribute_page_Alex_Honnold/"
+  },
+  {
+    id: 4,
+    img: require('../../assets/projects/climbing-survey.png'),
+    alt: "react online form",
+    title: "React online form",
+    info: "FreeCodeCamp responsive web design course",
+    tags: "HTML, CSS, REACT",
+    github: "https://github.com/Raxxius/react-form",
+    website: "https://raxxius.github.io/react-form/"
+  },
+  {
+    id: 5,
+    img: require('../../assets/projects/climbing-survey.png'),
+    alt: "react online form",
+    title: "React online form",
+    info: "FreeCodeCamp responsive web design course",
+    tags: "HTML, CSS, REACT",
+    github: "https://github.com/Raxxius/react-form",
+    website: "https://raxxius.github.io/react-form/"
+  },
+]
+
+// Project card //
 const Project = (props) => {
-  
-  // const url =
-  //   "https://script.google.com/macros/s/AKfycbyIdR8v2zqO6V1D4V1SrGw6DB32-w5s8ZJ_1FizPDx0n5s932Xa7cRABZC6RBDqo7SXKA/exec";
-  // const data = use(googleWebFetch(url));
-
-  const data = []
-  
-  const projects = data.map((project) => {
-    return (
-      <>
-        <ListItem {...project} />
-      </>
-    );
-  });
-
   return (
-    <section className="project section" id="project">
-      <h2 className="projects-title">Porfolio</h2>
-      {projects}
-    </section>
-  );
-};
+    <div className='project-box'>
+      <div className='project-img-box'> 
+          <Image className='project-img' src={props.img} alt={props.alt}></Image>
+      </div>
+      <h1 className='project-title'> {props.title}</h1>
+      <h2 className='project-description'> {props.info} </h2>
+      <h2 className='project-tag'> {props.tags} </h2>
+      <div className='project-links'>
+        <a href={props.website} className='project-link' target="_blank" rel="noreferrer"><h3>Website</h3></a>
+        <a href={props.github} className='project-link' target="_blank" rel="noreferrer"><h3>Github</h3></a>
+      </div>
+    </div>
+  )
+}
 
-export default Project;
+const Projects = () => {
+  const projects = portfolio.map(project => {
+    return (
+      <Project 
+        key={project.id}
+        {...project}
+      />
+    )
+  })
+  return (
+    <section id="project" className='project'>
+      <h1 className='project-title'>Here are some of my Projects</h1>
+      <div className='projects'>
+        {projects}
+      </div>
+
+    </section>  
+  )
+}
+
+export default Projects
