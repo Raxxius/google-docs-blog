@@ -41,11 +41,6 @@ const Contact = (props) => {
       });
   };
 
-  const contactStyle = {
-    backgroundColor: props.darkMode ? "#121212" : "#DEE4E7",
-    transition: "background-color 2s",
-  };
-
   const contactFlexStyle = {
     backgroundColor: props.darkMode ? "#1f1b24" : "#C7CDCF",
     color: props.darkMode ? "white" : "black",
@@ -65,7 +60,7 @@ const Contact = (props) => {
   };
 
   return (
-    <section className="contact" id="contact" style={contactStyle}>
+    <section className="contact" id="contact" >
       <div className="contact-flex-one" style={contactFlexStyle}>
         <h1 className="contact-one-h1">Want to create something together?</h1>
         <h2 className="contact-one-h2">Drop me a line!</h2>

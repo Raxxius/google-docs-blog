@@ -104,6 +104,26 @@ video {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+  perspective: 2px;
+}
+
+.main-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateZ(0);
+}
+
+.main-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateZ(-10px) scale(7);
+  z-index: -1;
 }
 
 section {

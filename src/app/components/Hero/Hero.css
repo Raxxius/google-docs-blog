@@ -22,39 +22,6 @@
   font-weight: 600;
 }
 
-.hero-cloud-box {
-  position: absolute;
-  left: 0%;
-}
-
-.starmap {
-  position: absolute;
-  left: 0%;
-  opacity: 1;
-}
-
-.smallstars {
-  height: 1px;
-  width: 1px;
-  background: transparent;
-  position: absolute;
-}
-
-.medstars {
-  height: 2px;
-  width: 2px;
-  background: transparent;
-  position: absolute;
-}
-
-.largestars {
-  height: 4px;
-  width: 4px;
-  background: transparent;
-  position: absolute;
-  filter: blur(1px);
-}
-
 @media (min-width: 768px) {
   .hero {
     align-items: start;
