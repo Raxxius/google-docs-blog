@@ -1,6 +1,6 @@
 import React from "react";
 
-function Icon() {
+function Icon(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,6 +9,7 @@ function Icon() {
       version="1.1"
       viewBox="0 0 45.3 31.5"
       xmlSpace="preserve"
+      className={props.className}
     >
       <g
         stroke="#FFF"
