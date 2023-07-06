@@ -7,9 +7,9 @@ import "../blog.css";
 import { use } from "react";
 
 export default function Page (props) {
-  //specific datafetch
+  // datafetch
   const url =
-    "https://script.google.com/macros/s/AKfycbwl1n76uCLYijMbXM5Z5b99J3gDWROj9Y1nzco3TKgg32H2G8IvBneeoUAgavugzCZuJQ/exec";
+    "https://script.google.com/macros/s/AKfycbyOmNJ4J0EOouG61xVDeyC74Rr1W8TaT8sCGxcjCWZnpTLNCd0vipzPXT4pqdkCNfhs/exec";
   const fileId = props.params.id;
   const fullUrl = `${url}?id=${fileId}`;
   const data = use(googleWebFetch(fullUrl));
