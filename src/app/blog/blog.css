@@ -47,7 +47,7 @@ h6 {
 /* [id] styling */
 
 .blog-solo-image {
-  height: 350px;
+  width: 100%;
   object-fit: cover;
   overflow: hidden;
   display: block;
@@ -68,6 +68,12 @@ h6 {
   text-align: center;
   font-size: 0.9rem;
   font-style: italic;
+}
+
+.code-block {
+  max-width: 100%;
+  overflow-y: scroll;
+
 }
 
 /* blog list styling */
@@ -173,6 +179,14 @@ h6 {
   color: aliceblue;
 }
 
+/* blog article styling */
+
+.blog-wrapper {
+  padding: 1rem;
+}
+
+
+
 @media (min-width: 768px) {
   .blog-grid {
     display: grid;
@@ -200,7 +214,6 @@ h6 {
 
   .blog-wrapper {
     grid-area: blog;
-    padding: 1rem;
   }
 }
 
