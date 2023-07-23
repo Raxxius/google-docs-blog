@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function BlogParse(item) {
+
   const parseTag = (style) => {
     return style === "HEADING_1"
       ? "h1"
@@ -10,6 +11,8 @@ export default function BlogParse(item) {
       ? "h3"
       : style === "SUBTITLE"
       ? "legend"
+      : style === "CODE"
+      ? "code"
       : "p";
   };
 
@@ -26,6 +29,7 @@ export default function BlogParse(item) {
         />
       );
     }
+
     if (item.className[num] === "blog-image") {
       return (
         <img
@@ -37,12 +41,32 @@ export default function BlogParse(item) {
         />
       );
     }
+
     // link
     if (item.className[num] === "link") {
       return (
-        <a className="blog-link" href={item.content[num].link} target="_blank" key={key}>
+        <a
+          className="blog-link"
+          href={item.content[num].link}
+          target="_blank"
+          key={key}
+        >
           {item.content[num].text}
         </a>
+      );
+    }
+
+    // code block
+    if (item.className[num] === "blog-code-block") {
+      return (
+        <div className="code-block" key={key}>
+          <pre>
+            <code>
+              {item.content[num]}
+            </code>
+          </pre>
+
+        </div>
       );
     }
 
@@ -63,7 +87,7 @@ export default function BlogParse(item) {
     // generic return element h1, h2, h3, etc
     return React.createElement(
       tag,
-      { className: className, key: key},
+      { className: className, key: key },
       item.content[num]
     );
   };

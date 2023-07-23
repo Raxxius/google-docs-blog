@@ -1,5 +1,5 @@
-import Moon from "../../../assets/icons/moon";
-import Sun from "../../../assets/icons/sun.jsx";
+import Moon from "@/app/assets/icons/moon.jsx";
+import Sun from "@/app/assets/icons/sun.jsx";
 import "./BlogNavBar.css";
 
 const Navbar = (props) => {
