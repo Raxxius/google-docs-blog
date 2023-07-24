@@ -1,19 +1,18 @@
 "use client"
 
 import React from "react";
-
 import "prismjs/themes/prism-tomorrow.css";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
-import { prism } from 'react-syntax-highlighter/dist/cjs/prism'
+import Prism from "prismjs"
+import "prismjs/components/prism-jsx"
+import { useEffect } from "react";
 
 export default function BlogParse(item) {
-  const CodeHighlighter = ({ language, code }) => {
-    return (
-      <SyntaxHighlighter language={language} style={prism}>
-        {code}
-      </SyntaxHighlighter>
-    );
-  };
+  useEffect(() => {
+    const highlight = async () => {
+      await Prism.highlightAll();
+    };
+      highlight();
+    }, []);
 
   const parseTag = (style) => {
     return style === "HEADING_1"
@@ -75,7 +74,9 @@ export default function BlogParse(item) {
       return (
         <div className="code-block" key={key}>
           <pre className="language-jsx">
-            <CodeHighlighter language={"javascript"} code={codeBlockContent} />
+            <code className="language-jsx">
+                {codeBlockContent}
+            </code>
           </pre>
 
         </div>
