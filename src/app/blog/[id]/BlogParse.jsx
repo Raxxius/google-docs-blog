@@ -3,17 +3,17 @@
 import React from "react";
 
 import "prismjs/themes/prism-tomorrow.css";
-import Prism from "prismjs"
-import "prismjs/components/prism-jsx"
-import { useEffect } from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+import { prism } from 'react-syntax-highlighter/dist/cjs/prism'
 
 export default function BlogParse(item) {
-  useEffect(() => {
-    const highlight = async () => {
-      await Prism.highlightAll();
-    };
-      highlight();
-    }, []);
+  const CodeHighlighter = ({ language, code }) => {
+    return (
+      <SyntaxHighlighter language={language} style={prism}>
+        {code}
+      </SyntaxHighlighter>
+    );
+  };
 
   const parseTag = (style) => {
     return style === "HEADING_1"
@@ -75,9 +75,7 @@ export default function BlogParse(item) {
       return (
         <div className="code-block" key={key}>
           <pre className="language-jsx">
-            <code className="language-jsx">
-                {codeBlockContent}
-            </code>
+            <CodeHighlighter language={"javascript"} code={codeBlockContent} />
           </pre>
 
         </div>
