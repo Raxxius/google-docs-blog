@@ -1,18 +1,9 @@
-"use client"
-
 import React from "react";
-import "prismjs/themes/prism-tomorrow.css";
-import Prism from "prismjs"
-import "prismjs/components/prism-jsx"
-import { useEffect } from "react";
+import PrismBlock from "./components/PrismBlock";
+
 
 export default function BlogParse(item) {
-  useEffect(() => {
-    const highlight = async () => {
-      await Prism.highlightAll();
-    };
-      highlight();
-    }, []);
+
 
   const parseTag = (style) => {
     return style === "HEADING_1"
@@ -73,12 +64,7 @@ export default function BlogParse(item) {
       const codeBlockContent = item.content[num].join("")
       return (
         <div className="code-block" key={key}>
-          <pre className="language-jsx">
-            <code className="language-jsx">
-                {codeBlockContent}
-            </code>
-          </pre>
-
+          <PrismBlock code={codeBlockContent} />
         </div>
       );
     }
