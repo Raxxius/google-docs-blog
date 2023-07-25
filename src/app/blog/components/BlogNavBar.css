@@ -9,14 +9,23 @@
   top: 0;
   position: fixed;
   z-index: 999;
+  background-color: black;
+  color: lightcyan;
+  transition: background-color 2s, color 2s;
 }
 
 .links-list {
   border: none;
+  position: fixed;
 }
 
-.links-spacer {
-  width: 30vw;
+.link-item {
+  padding: 2em;
+  z-index: 9999;
+}
+
+.link-item:hover {
+  color: orange
 }
 
 @media (min-width: 1200px) {
