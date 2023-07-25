@@ -18,6 +18,7 @@ body {
   color: aliceblue;
   padding: 0px;
   margin: 0px;
+  word-wrap: break-word;
 }
 
 a {
@@ -47,7 +48,9 @@ h6 {
 /* [id] styling */
 
 .blog-solo-image {
-  width: 100%;
+  max-width: 100%;
+  min-height: 150px;
+  max-height: 450px;
   object-fit: cover;
   overflow: hidden;
   display: block;
@@ -72,7 +75,7 @@ h6 {
 
 .code-block {
   max-width: 100%;
-  overflow-y: scroll;
+  border-radius: 5px;
 }
 
 /* blog list styling */
