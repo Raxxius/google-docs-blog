@@ -84,7 +84,7 @@ const Navbar = (props) => {
             Contact
           </a>
           <a
-            href="#blog"
+            href="blog"
             className={
               showMenu
                 ? props.darkMode
