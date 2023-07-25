@@ -9,7 +9,7 @@ import { use } from "react";
 export default function Page (props) {
   // datafetch
   const url =
-    "https://script.google.com/macros/s/AKfycbxJvSVneLWnfO93pBDObeIHVAuJAKI_r9kg--Vl0d7PwchDWHRb-OvMSplxunHHgkqJ9A/exec";
+    "https://script.google.com/macros/s/AKfycbzL_nbz0E1J96OUBanb2dD9WGJctFBcThK8SmD675YEWKxTVt9Nx3ZkTeiDMSWVa6YA8Q/exec";
   const fileId = props.params.id;
   const fullUrl = `${url}?id=${fileId}`;
   const data = use(googleWebFetch(fullUrl));
