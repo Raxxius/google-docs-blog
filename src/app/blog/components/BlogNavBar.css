@@ -11,15 +11,6 @@
   z-index: 999;
 }
 
-.darkMode-btn {
-  height: 40px;
-  width: 40px;
-  border: none;
-  background-color: grey;
-  border-radius: 0.5rem;
-  z-index: 2;
-}
-
 .links-list {
   border: none;
 }
