@@ -6,11 +6,11 @@ import Navbar from "../components/BlogNavBar.jsx"
 import "../blog.css";
 import { use } from "react";
 
-export default function Page (props) {
+export default function Page ({ params }) {
   // datafetch
   const url =
     "https://script.google.com/macros/s/AKfycbzL_nbz0E1J96OUBanb2dD9WGJctFBcThK8SmD675YEWKxTVt9Nx3ZkTeiDMSWVa6YA8Q/exec";
-  const fileId = props.params.id;
+  const fileId = params.id;
   const fullUrl = `${url}?id=${fileId}`;
   const data = use(googleWebFetch(fullUrl));
 

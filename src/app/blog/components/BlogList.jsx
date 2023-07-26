@@ -3,6 +3,7 @@ import Link from "next/link";
 import googleWebFetch from "@/apis/googleWebFetch";
 
 export default function blogList(props) {
+
   const url = props.url
   const data = use(
     googleWebFetch(url)
