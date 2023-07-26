@@ -20,7 +20,8 @@ export default function blogList(props) {
             <p className="blog-list-date">{date}</p>
             <img
               className="blog-list-image"
-              src={data[blog].image.imageCuri}
+              src={data[blog].imageCuri}
+              alt={data[blog].imageDescription}
               referrerPolicy="no-referrer"
             />
             <p className="blog-list-text fade">{data[blog].introText}</p>
