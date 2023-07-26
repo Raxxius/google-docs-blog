@@ -153,8 +153,9 @@ h6 {
   text-align: center;
 }
 
-.sidbar-date {
+.sidebar-date {
   font-size: 0.8rem;
+  padding-top: 0;
 }
 
 /* blog header styling */
