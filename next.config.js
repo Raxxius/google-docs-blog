@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: '/blog'
+    distDir: '/blog'
 }
 
 module.exports = nextConfig
