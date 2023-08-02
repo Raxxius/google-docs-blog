@@ -1,7 +1,7 @@
-import BlogAuthor from "../components/BlogAuthor.jsx";
-import BlogHeader from "../components/BlogHeader.jsx";
-import Loader from "../components/Loader.jsx"
-import Navbar from "../components/BlogNavBar.jsx"
+import BlogAuthor from "../../components/BlogAuthor.jsx";
+import BlogHeader from "../../components/BlogHeader.jsx";
+import Loader from "../../components/Loader.jsx"
+import Navbar from "../../components/BlogNavBar.jsx"
 import "../blog.css";
 
 export default function LoadingPage() {
