@@ -14,7 +14,7 @@ export default function blogList(props) {
     for (let blog in data) {
       const date = new Date(data[blog].fileDate).toDateString();
       let returnValue = (
-        <Link href={`/${encodeURIComponent(data[blog].fileId)}`} className="blog-list-wrapper">
+        <Link href={`blog/${encodeURIComponent(data[blog].fileId)}`} className="blog-list-wrapper">
           <div className="blog-list-wrapper">
             <h1 className="blog-list-title">{data[blog].title}</h1>
             <p className="blog-list-date">{date}</p>
