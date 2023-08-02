@@ -1,5 +1,5 @@
 import { use } from "react";
-import googleWebFetch from "../apis/googleWebFetch";
+import googleWebFetch from "../../apis/googleWebFetch";
 import Link from "next/link";
 
 export default function BlogSideBar(props) {
