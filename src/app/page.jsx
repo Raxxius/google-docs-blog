@@ -1,31 +1,25 @@
-"use client";
+import "./blog.css";
+import BlogNavBar from "./components/BlogNavBar";
+import BlogAuthor from "./components/BlogAuthor";
+import BlogHeader from "./components/BlogHeader";
+import BlogList from "./components/BlogList";
+import BlogSideBar from "./components/BlogSideBar";
 
-import Background from "./components/Background/Background";
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Project from "./components/Project/Project";
-import Contact from "./components/Contact/Contact";
-import "./app2.css";
-import { useState } from "react";
-
-export default function Home() {
-  let [darkMode, setDarkMode] = useState(false);
+function App() {
+  const url =
+    "https://script.google.com/macros/s/AKfycbyEGQAcQLaDqj1NW48B9jMk_br8Otl1jjRjd-lgXkKAoXyJxw166HSYwGuFIY0lQfRx/exec";
 
   return (
-    <div className="wrapper">
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <div className="main">
-        <div className="main-content">
-          <Hero darkMode={darkMode} />
-          <About darkMode={darkMode} />
-          <Project darkMode={darkMode} />
-          <Contact darkMode={darkMode} />
-        </div>
-        <div className="main-background">
-          <Background darkMode={darkMode} />
-        </div>
+    <>
+      <BlogNavBar />
+      <div className="blog-grid">
+        <BlogHeader />
+        <BlogList url={url} />
+        <BlogSideBar url={url} />
+        <BlogAuthor />
       </div>
-    </div>
+    </>
   );
 }
+
+export default App;
