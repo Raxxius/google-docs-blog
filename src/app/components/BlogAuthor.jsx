@@ -1,6 +1,6 @@
-import camart from "@/app/blog/assets/images/keith-camart.png"
-import linked_in from "@/app/blog/assets/icons/linked_in.svg"
-import github from "@/app/blog/assets/icons/github.svg"
+import camart from "@/app/assets/images/keith-camart.png"
+import linked_in from "@/app/assets/icons/linked_in.svg"
+import github from "@/app/assets/icons/github.svg"
 
 export default function BlogAuthor() {
   return (
