@@ -1,4 +1,4 @@
-import "@/app/blog.css"
+import "src/app/blog.css"
 import BlogNavBar from "./components/BlogNavBar";
 import BlogAuthor from "./components/BlogAuthor";
 import BlogHeader from "./components/BlogHeader";
