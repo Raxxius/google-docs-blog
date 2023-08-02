@@ -1,6 +1,6 @@
 import { use } from "react";
 import Link from "next/link";
-import googleWebFetch from "@/apis/googleWebFetch";
+import googleWebFetch from "../../apis/googleWebFetch";
 
 export default function blogList(props) {
 

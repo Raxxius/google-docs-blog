@@ -1,5 +1,5 @@
 import { use } from "react";
-import googleWebFetch from "@/apis/googleWebFetch";
+import googleWebFetch from "../../apis/googleWebFetch";
 import Link from "next/link";
 
 export default function BlogSideBar(props) {
@@ -14,7 +14,7 @@ export default function BlogSideBar(props) {
     const fileId = data[blog].fileId;
     let returnValue = (
       <Link
-        href={`/${encodeURIComponent(fileId)}`}
+        href={`/blog/${encodeURIComponent(fileId)}`}
         className="sidebar-wrapper"
         key={`blog-${blog}`}
       >
