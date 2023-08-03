@@ -14,7 +14,7 @@ export default function BlogSideBar(props) {
     const fileId = data[blog].fileId;
     let returnValue = (
       <Link
-        href={`/blog/${encodeURIComponent(fileId)}`}
+        href={`blog/${encodeURIComponent(fileId)}`}
         className="sidebar-wrapper"
         key={`blog-${blog}`}
       >
