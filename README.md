@@ -2,7 +2,7 @@
 
 A Fullstack project designed with Google Apps (Drive, Sheets, Docs), Google Apps Script and Next.js JAMstack
 
-![responsivelayout](/_readme/responsive-layout.png "responsive layout")
+![responsivelayout](/src/_readme/responsive-layout.png "responsive layout")
 
 ## Table of Contents
 
