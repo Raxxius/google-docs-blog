@@ -54,41 +54,55 @@ Hero image Photo by:
 ### Additional Dependencies
 
 Frontend:
-- <a href="https://emotion.sh/docs/introduction">emotion/css</a>
 - <a href="https://prismjs.com/">prismjs</a>
 
 Backend:
 - <a href="https://cloud.google.com/">Google Cloud Services</a>
-
-
 
 ## Setup
 
 ### Google Drive
 
 - Requires Google Account and Google Cloud Service
+
+Setting up the Drive Structure:
 - Create a folder in Google Drive
 - In the folder create the subfolders Articles and Index
-- In the Index folder create the sheet named bloxIndexer
+- In the Index folder create a subfolder called IndexImages
 
+Create index file:
+- In the Index folder create the sheet named blogIndex
+- In the first row name the first 7 cells: *title, imageDescription, imageCuri, introText, fileId, fileDate*
 
+### Google Apps Script
 
-## Credits
+FormIndexFetch
+- Open the blogIndexer sheet
+- Click on the 'Extensions' tab and select 'Apps Script'
+- Copy the content of formIndexFetch.js into the Apps Script
+- Deploy the Apps Script
 
-Photo by <a href="https://unsplash.com/@alexacea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexandru Acea</a> on <a href="https://unsplash.com/photos/XEB8y0nRRP4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Blog Fetch API:
+- In Google Apps Script full (not via the formIndex link) create a new project titled blogFetcher
+- Copy the content of blogFetchApi.js into the Apps Script
+- Add your blogs folder (specific folder that contains the blog articles) ID to the script
+- Deploy the Apps Script
 
-outside click event listener:
-- https://codesandbox.io/s/outside-alerter-hooks-lmr2y?module=%2Fsrc%2FOutsideAlerter.js  
+BlogIndexer:
+- In Google Apps Script full (not via the formIndex link) create a new project titled blogIndexer
+- Copy the content of blogIndexer.js into the Apps Script
+- Add your blogs folder (specific folder that contains the blog articles) ID, your blogIndex sheet ID, and your blog image folder ID in the relative places
+- Deploy the Apps Script
 
-svgs converted to jsx files via:
-- https://svg2jsx.com/
+### Nextjs
 
-https://favicon.io/favicon-generator/
+- Install Nextjs in relative folder
+- Install Prismjs
+- Copy content of Apps folder into the Nextjs folder
+- Deploy website
 
+### Daily Use
 
-  packages:
-  emotion/css https://emotion.sh/
-https://www.npmjs.com/package/@emailjs/browser
-
-sharp 
-
+- Write blogs as per template
+- Deposit finished blogs into blogs folder
+- Run the blogIndexer (can automate to daily/weekly if required via triggers)
