@@ -100,6 +100,7 @@ BlogIndexer:
 - Install Prismjs
 - Copy content of Apps folder into the Nextjs folder
 - Deploy website
+- Note basePath is /blog, so localhost:3000 will be localhost:3000/blog
 
 ### Daily Use
 
