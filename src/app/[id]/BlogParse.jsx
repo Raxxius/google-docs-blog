@@ -1,5 +1,5 @@
 import React from "react";
-import PrismBlock from "./components/PrismBlock";
+import PrismBlock from "./_components/PrismBlock";
 
 
 export default function BlogParse(item) {

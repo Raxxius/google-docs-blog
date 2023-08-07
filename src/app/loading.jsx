@@ -1,8 +1,8 @@
 import "src/app/blog.css";
-import Navbar from "src/app/components/BlogNavBar";
-import BlogAuthor from "src/app/components/BlogAuthor";
-import BlogHeader from "src/app/components/BlogHeader";
-import Loader from "src/app/components/Loader"
+import Navbar from "src/app/_components/BlogNavBar";
+import BlogAuthor from "src/app/_components/BlogAuthor";
+import BlogHeader from "src/app/_components/BlogHeader";
+import Loader from "src/app/_components/Loader"
 export default function Loading() {
     return (
         <>
