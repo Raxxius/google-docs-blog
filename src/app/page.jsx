@@ -7,7 +7,7 @@ import BlogSideBar from "src/app/_components/BlogSideBar";
 
 function App() {
   const url =
-    "https://script.google.com/macros/s/AKfycbyEGQAcQLaDqj1NW48B9jMk_br8Otl1jjRjd-lgXkKAoXyJxw166HSYwGuFIY0lQfRx/exec";
+    "https://script.google.com/macros/s/AKfycbw_d_EDSYOID75y7BCXBDED1h-GS7py1Yjmjks64SREPzi197Agga1PUn8t3winPupF0g/exec";
 
   return (
     <>
