@@ -2,6 +2,6 @@
 
 module.exports = {
     basePath: "/blog",
-    cleanUrls: true,
-    trailingSlash: true,
+    assetPrefix: "/blog",
+    trailingSlash: false
 }
