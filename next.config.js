@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 module.exports = {
-    basePath: ""
+    basePath: "/blog",
+    cleanUrls: true,
+    trailingSlash: true,
 }
