@@ -8,13 +8,14 @@ export default function blogList(props) {
   const data = use(
     googleWebFetch(url)
   );
-
+  
   return (
     <div className="blog-list">
       {data !== undefined &&
         Array.isArray(data) &&
         data.map((blog) => {
           const date = new Date(blog.fileDate).toDateString();
+          const imageId = blog.imageCuri.split('id=')[1]
           return (
             <Link
               key={blog.fileId}
@@ -26,9 +27,10 @@ export default function blogList(props) {
                 <p className="blog-list-date">{date}</p>
                 <img
                   className="blog-list-image"
-                  src={blog.imageCuri}
+                  src={`blog/api/fetchImage?id=${imageId}`}
                   alt={blog.imageDescription}
                   referrerPolicy="no-referrer"
+                    crossOrigin="anonymous"
                 />
                 <p className="blog-list-text fade">{blog.introText}</p>
               </div>
