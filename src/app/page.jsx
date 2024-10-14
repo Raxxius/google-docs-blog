@@ -1,9 +1,9 @@
-import "src/app/blog.css"
-import BlogNavBar from "src/app/_components/BlogNavBar";
-import BlogAuthor from "src/app/_components/BlogAuthor";
-import BlogHeader from "src/app/_components/BlogHeader";
-import BlogList from "src/app/_components/BlogList";
-import BlogSideBar from "src/app/_components/BlogSideBar";
+import "./blog.css"
+import BlogNavBar from "./_components/BlogNavBar";
+import BlogAuthor from "./_components/BlogAuthor";
+import BlogHeader from "./_components/BlogHeader";
+import BlogList from "./_components/BlogList";
+import BlogSideBar from "./_components/BlogSideBar";
 
 function App() {
   const url =
