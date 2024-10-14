@@ -9,27 +9,32 @@ export default function blogList(props) {
     googleWebFetch(url)
   );
 
-  const blogs = [];
-  if (data !== "undefined") {
-    for (let blog in data) {
-      const date = new Date(data[blog].fileDate).toDateString();
-      let returnValue = (
-        <Link href={`blog/${encodeURIComponent(data[blog].fileId)}`} className="blog-list-wrapper">
-          <div className="blog-list-wrapper">
-            <h1 className="blog-list-title">{data[blog].title}</h1>
-            <p className="blog-list-date">{date}</p>
-            <img
-              className="blog-list-image"
-              src={data[blog].imageCuri}
-              alt={data[blog].imageDescription}
-              referrerPolicy="no-referrer"
-            />
-            <p className="blog-list-text fade">{data[blog].introText}</p>
-          </div>
-        </Link>
-      );
-      blogs.push(returnValue);
-    }
-  }
-  return <div className="blog-list">{blogs}</div>;
+  return (
+    <div className="blog-list">
+      {data !== undefined &&
+        Array.isArray(data) &&
+        data.map((blog) => {
+          const date = new Date(blog.fileDate).toDateString();
+          return (
+            <Link
+              key={blog.fileId}
+              href={`blog/${encodeURIComponent(blog.fileId)}`}
+              className="blog-list-wrapper"
+            >
+              <div className="blog-list-wrapper">
+                <h1 className="blog-list-title">{blog.title}</h1>
+                <p className="blog-list-date">{date}</p>
+                <img
+                  className="blog-list-image"
+                  src={blog.imageCuri}
+                  alt={blog.imageDescription}
+                  referrerPolicy="no-referrer"
+                />
+                <p className="blog-list-text fade">{blog.introText}</p>
+              </div>
+            </Link>
+          );
+        })}
+    </div>
+  );
 }
