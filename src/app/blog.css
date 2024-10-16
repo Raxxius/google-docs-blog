@@ -165,12 +165,11 @@ h6 {
 .blog-header {
   height: 200px;
   background-color: #c2c1e5;
-  background-image: url("../app/_assets/images/alexandru-acea-XEB8y0nRRP4-unsplash.jpg");
-  background-size: cover;
-  background-position: 0% 35%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .blog-header-title {
@@ -182,6 +181,7 @@ h6 {
   margin-right: auto;
   margin-left: auto;
   color: aliceblue;
+  z-index: 1;
 }
 
 /* blog article styling */
